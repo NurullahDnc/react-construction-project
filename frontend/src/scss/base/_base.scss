@@ -1,0 +1,76 @@
+//format?
+
+@import '../variables/index.scss';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scrollbar-width: thin;
+
+ 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+     
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    line-height: 1;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+input[type="checkbox"],
+input[type="range"] {
+    accent-color: var(--main-color-2);
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img,
+svg {
+    vertical-align: middle;
+    user-select: none;
+}
+ 
+ 
+ 

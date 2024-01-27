@@ -1,0 +1,20 @@
+
+//responsive
+
+//max-width degerlerini break pointsden de alabilriiz
+//content nedir = gelen degerler
+
+@mixin mmobil {
+    @media only screen and (max-width: 400px) {
+        @content
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 400px) {
+        @content
+    }
+}
+
+
+

@@ -1,0 +1,104 @@
+:root {
+  --black-color: #000000;
+  --bg-color: #141414;
+  --bg-color-2: #161819;
+  --bg-color-3: #222;
+  --main-color: #FF0000;
+  --main-color-2: #ED1D24;
+  --text-color: #a9afc3;
+  --text-muted: #6c757d;
+  --track-color: #202324;
+  --thumb-color: #454a4d;
+  --thumb-hover-color: #596268;
+  --fb-color: #3b5998;
+  --google-color: #a61c00;
+  --twitter-color: #1da1f2;
+  --text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.8);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+  line-height: 1;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+input[type=checkbox],
+input[type=range] {
+  accent-color: var(--main-color-2);
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img,
+svg {
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+:root {
+  --black-color: #000000;
+  --bg-color: #141414;
+  --bg-color-2: #161819;
+  --bg-color-3: #222;
+  --main-color: #FF0000;
+  --main-color-2: #ED1D24;
+  --text-color: #a9afc3;
+  --text-muted: #6c757d;
+  --track-color: #202324;
+  --thumb-color: #454a4d;
+  --thumb-hover-color: #596268;
+  --fb-color: #3b5998;
+  --google-color: #a61c00;
+  --twitter-color: #1da1f2;
+  --text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.8);
+}/*# sourceMappingURL=Styles.css.map */

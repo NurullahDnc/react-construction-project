@@ -1,0 +1,18 @@
+// tüm dosyaları buraya import edicez buradan dısarıya gondericez
+
+        // Base
+@import '../scss/base/base';
+@import '../scss/extends/extends';
+@import '../scss/mixins/mixins';
+@import '../scss/variables/index.scss';
+
+
+
+// Components
+@import './components/navbar';
+
+
+
+
+
+// Pages
