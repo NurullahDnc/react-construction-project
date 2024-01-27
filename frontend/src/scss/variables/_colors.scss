@@ -3,3 +3,30 @@
 $colorred : red;
 $colorblack : black;
 $colorgray: gray;
+
+
+:root {
+    --black-color: #000000;
+
+    --bg-color-: #f7f7f4;
+    --bg-color-2: #222;
+    --bg-color3: #141414;
+
+    --main-color: #ff5500;
+ 
+    --text-color: #fffffc;
+    --text-color2: #454544;
+
+
+
+    
+    --track-color: #202324;
+    --thumb-color: #454a4d;
+    --thumb-hover-color: #596268;
+
+    --fb-color: #3b5998;
+    --google-color: #a61c00;
+    --twitter-color: #1da1f2;
+
+    --text-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.8);
+}

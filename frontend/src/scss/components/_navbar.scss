@@ -1,0 +1,21 @@
+
+
+//as mobil moda geldi mi calış
+
+.as{
+    color: aqua;
+
+    &-asd1{
+        color: aquamarine;
+
+    }
+    &-asd2{
+        color: red;
+
+    }
+
+    //responsive
+    // @include mobil {
+    //     color: black;
+    // }
+}

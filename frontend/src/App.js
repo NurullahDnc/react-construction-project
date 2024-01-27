@@ -1,4 +1,4 @@
-import './dist/Styles.css';
+import './scss/Styles.scss';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/NavBar';
 import Home from './page/Home';
