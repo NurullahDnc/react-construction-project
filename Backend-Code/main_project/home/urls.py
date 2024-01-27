@@ -1,19 +1,11 @@
 
 from django.http import HttpResponse
 from django.urls import path
-def home(req):
-    return HttpResponse("Anasayfa")
-
-def iletisim(req):
-    return HttpResponse("iletisim")
-
-def hakkimizda(req):
-    return HttpResponse("hakkimizda sayfası")
-
+from . import views
 
 urlpatterns = [
-    path('',home),
-    path('anasayfa',home),
-    path('iletisim',iletisim),
-    path('hakkimizda',hakkimizda)
+    path('',views.home),
+    path('anasayfa',views.home),
+    path('iletisim',views.iletisim),
+    path('hakkimizda',views.hakkimizda)
 ]
