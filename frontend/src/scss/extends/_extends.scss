@@ -1,3 +1,4 @@
+@import '../variables/index.scss';
 
 //kodları degisken gibi tanımlıyoruz , kod tekrarını onluyor
 
@@ -8,4 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%navbar-border{
+
+    border: $main-orange 1px solid ;
+    padding: 10px;    
+    background-color: rgb(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    
 }

@@ -1,0 +1,19 @@
+
+
+.home{
+
+
+    &-container{
+        width: 90%;
+        margin: auto;
+        
+
+        &-title{
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+}

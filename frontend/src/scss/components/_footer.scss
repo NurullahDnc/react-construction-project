@@ -1,0 +1,25 @@
+
+.Footer{
+    border-top: 2px $bg-black solid ;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    text-align: center;
+    align-items: center;
+    font-size: $smalFont;
+
+    @include mobil{
+        display: block;
+    }
+
+    &-item{
+        width: 30%;
+       
+        @include mobil{
+            width: 100%;
+            padding: 10px 0;
+        }
+    }
+  
+}

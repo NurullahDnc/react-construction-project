@@ -10,7 +10,24 @@
 
 // Components
 @import './components/navbar';
+@import './components/banner';
+@import './components/homeProject.scss';
+@import './components/contactUs';
+@import './components/servicesText';
+@import './components/footer';
+@import './components/brand';
 
+
+
+
+
+//general
+
+@import './components/general/button';
+@import './components/general/heading';
+@import './components/general/services';
+@import './components/general/ContactUsCol';
+@import './components/general/footerItem';
 
 
 

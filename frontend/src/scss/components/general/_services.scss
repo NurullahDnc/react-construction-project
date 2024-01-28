@@ -1,0 +1,45 @@
+
+.services{
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+
+    @include mobil {
+
+        display: block;
+    }
+
+    &-image{
+        width: 50%;
+        height: 700px;
+        display: flex;        
+        justify-content: center;
+
+        &-img{
+            height: 100%;
+            background-size: cover  ;
+            background-color: red;
+
+        }
+        @include mobil {
+            width: 100%;
+         }
+
+        
+    }
+    &-text{
+        width: 50%;
+        text-indent: 25px;
+        text-align: center;
+
+
+        @include mobil {
+            width: 100%;
+            padding: 25px 0;
+
+         }
+    }
+    
+}

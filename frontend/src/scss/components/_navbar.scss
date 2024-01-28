@@ -1,15 +1,77 @@
+.navbars {
+
+    color: $text-white;
+    margin-top: 20px;
+
+    &-menu{
+        color: red;
+ 
+        &-btn{
+            color: black;
+
+        }
+    }
+    &-left {
+        @extend %navbar-border;
+
+        &-items {
+            padding-left: 10px;
+
+            &:hover {
+                color: $bg-black;
+                transition: 0.7s;
+
+            }
+        }
+    }
+
+    &-right {
+
+        &-item {
+
+            @extend %navbar-border;
+
+
+            &-items {
+                padding: 0 20px;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //as mobil moda geldi mi calış
 
-.as{
+.as {
     color: aqua;
 
-    &-asd1{
+    &-asd1 {
         color: aquamarine;
 
     }
-    &-asd2{
+
+    &-asd2 {
         color: red;
 
     }

@@ -1,0 +1,52 @@
+
+.ContactUs{
+
+    width: 100%;
+    height: 100%;
+    color: $text-white;
+    background-color: gray;
+    &-image{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+
+        &-iamges{
+            width: 100%;
+            height: 45rem;
+            background-size: cover;
+            position: absolute;
+            filter: brightness(0.8);
+            
+
+        }
+
+ 
+    }
+
+    &-text{
+         position: relative;
+        top: 0;
+        width: 100%;
+        height: 56rem;
+        margin: auto;
+        padding: 10px;
+
+        overflow: hidden;
+        @include mobil {
+
+            
+        }
+ 
+
+    }
+
+    &-icons{
+        display: flex;
+
+        @include mobil {
+            display: block;
+        }
+    }
+   
+}
