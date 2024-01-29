@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function Services({img, icon:Icon, title, text1, text2}) {
+export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
   return (
     <div className='services'>
         

@@ -2,10 +2,12 @@ import './scss/Styles.scss';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/NavBar';
 import Home from './page/Home';
-import Services from './page/Services';
+import ServicesPage from './page/ServicesPage';
+import Project from './page/Project';
+
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+ 
 function App() {
   return (
     <div className="App">
@@ -13,7 +15,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/service" element={<Services/>} />
+          <Route path="/service" element={<ServicesPage/>} />
+          <Route path="/project" element={<Project/>} />
+
 
           {/*sayfa bulunamadıgı zaman varsayılan olarak calısacak */}
           <Route path="*" element={<div>sayfa bulunmadı</div>} />

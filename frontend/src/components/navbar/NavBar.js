@@ -15,10 +15,10 @@ export default function NavBar() {
           <ul className="navbars-right-item navbar-nav ml-auto">
            
             <li className="navbars-right-item-items nav-item">
-              <NavLink className="nav-link" to="/services">Hizmetler</NavLink>
+              <NavLink className="nav-link" to="/service">Hizmetler</NavLink>
             </li>
             <li className="navbars-right-item-items nav-item">
-              <NavLink className="nav-link" to="#">Projeler</NavLink>
+              <NavLink className="nav-link" to="/project">Projeler</NavLink>
             </li>
             <li className="navbars-right-item-items nav-item">
               <NavLink className="nav-link" to="#">Hakkımızda</NavLink>

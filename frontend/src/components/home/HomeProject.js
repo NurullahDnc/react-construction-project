@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from '../general/Heading'
 import Button from '../general/Button'
-import Services from '../general/Services'
+import Services from '../general/ServicesProduct'
 import { FaCity } from "react-icons/fa6";
 import ContactUs from './ContactUs';
 import ContactUsCol from '../general/ContactUsItem';
