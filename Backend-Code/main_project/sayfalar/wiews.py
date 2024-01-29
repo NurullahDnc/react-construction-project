@@ -3,10 +3,21 @@ from django.shortcuts import render
 
 
 def anasayfa(request):
-    return render(request,'pages/anasayfa.html')
+    return render(request,'pages/anasayfa.html',{
+                  'name':'erkut',
+                  'surname':'elik'})
 
 def iletisim(request):
-    return render (request,'pages/iletisim.html')
+    data={
+        'name':'isim',
+        'surnama':'soyisim',
+        'number':'sayı',
+    }
+
+    return render (request,'pages/iletisim.html',{
+        'veri':data.keys(),
+        'deger':data.values()
+    })
 
 def hakkimizda(request):
     return render(request,"pages/hakkimizda.html")
