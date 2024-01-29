@@ -5,9 +5,12 @@ import Home from './page/Home';
 import ServicesPage from './page/ServicesPage';
 import Project from './page/Project';
 
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
- 
+import About from './page/About';
+import Career from './page/Career';
+import Contact from './page/Contact';
+
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +20,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<ServicesPage/>} />
           <Route path="/project" element={<Project/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/career" element={<Career/>} />
+          <Route path='/contact' element={<Contact />} />
+
 
 
           {/*sayfa bulunamadıgı zaman varsayılan olarak calısacak */}

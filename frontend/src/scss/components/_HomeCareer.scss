@@ -1,0 +1,20 @@
+
+
+.HomeCareer{
+    width: 90%;
+    margin: auto;
+    
+
+    &-ServicesText{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.HomeCareercomps{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    
+}

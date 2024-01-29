@@ -31,10 +31,10 @@
         height: 56rem;
         margin: auto;
         padding: 10px;
-
         overflow: hidden;
-        @include mobil {
 
+        @include mobil {
+        padding-left: 30px;
             
         }
  

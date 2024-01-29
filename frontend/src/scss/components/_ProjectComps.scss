@@ -3,7 +3,11 @@
  
     &-container{
    
-     
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;     
+        margin-bottom: 50px ;
 
     }
   }
@@ -12,26 +16,36 @@
 
 
 .ProjectProduct{
-    
-    width: 30%;
-    height: 270px;
-    background-color: hotpink;
+    width: 100%;
+    height: 330px;
+    padding: 23px;
+
+    @include mobil{
+        padding: 0;
+    }
 
     &-img{
-        width: 100%;
-        height: 230px;
-        background-color: bisque;
+       width: 390px;
+        height: 260px;
+        transition: transform 0.7s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1); /* Ölçekleme faktörünü dilediğiniz gibi ayarlayabilirsiniz */
+
+        }
 
         &-imgs{
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
+        
     }
 
     &-text{
-        display: flex;
-        align-items: center;
-
+        width: 100%;
+        font-size: 28px;
+        padding: 10px 0;
     }
 }

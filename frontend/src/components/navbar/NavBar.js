@@ -21,13 +21,13 @@ export default function NavBar() {
               <NavLink className="nav-link" to="/project">Projeler</NavLink>
             </li>
             <li className="navbars-right-item-items nav-item">
-              <NavLink className="nav-link" to="#">Hakkımızda</NavLink>
+              <NavLink className="nav-link" to="/about">Hakkımızda</NavLink>
             </li>
             <li className="navbars-right-item-items nav-item">
-              <NavLink className="nav-link" to="#">Kariyer</NavLink>
+              <NavLink className="nav-link" to="/career">Kariyer</NavLink>
             </li>
             <li className="navbars-right-item-items nav-item">
-              <NavLink className="nav-link" to="#">İletisim</NavLink>
+              <NavLink className="nav-link" to="/contact">İletisim</NavLink>
             </li>
           </ul>
         </div>

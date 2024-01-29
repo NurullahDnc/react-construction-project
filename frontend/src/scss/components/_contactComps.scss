@@ -1,0 +1,58 @@
+
+
+.ContactComps{
+
+    width: 100%;
+    display: flex;
+
+    @include mobil{
+        display: block;
+    }
+
+    &-form{
+        width: 50%;
+        margin: 25px;
+        
+        @include mobil{
+            width: 100%;
+            margin: 0;
+        }
+
+        &-item{
+            width: 100%;
+            color: black;
+
+            input{
+                padding: 15px 20px;
+                margin: 10px  30px;
+                border-bottom: 1px solid black;
+
+         
+                ::placeholder{
+                    color: black;
+                }
+            }
+
+            textarea{
+                border: 1px black solid;
+                margin: 25px  30px;
+                padding: 10px;
+
+            }
+        }
+        Button{
+            margin: 10px  30px;
+            
+        }
+    }
+
+    &-img{
+        width: 50%;
+
+        @include mobil{
+            width: 100%;
+            margin: 40px 0;
+        }
+
+    }
+}

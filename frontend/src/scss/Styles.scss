@@ -13,11 +13,13 @@
 @import './components/banner';
 @import './components/homeProject.scss';
 @import './components/contactUs';
-@import './components/homeServiceText';
+@import './components/HomeCareer';
 @import './components/footer';
-@import './components/brand';
-@import './components/servicesComps';
+@import './components/homeBrand';
 @import './components/ProjectComps';
+@import './components/aboutComps';
+@import './components/CareerComps';
+@import './components/contactComps';
 
 
 
@@ -26,9 +28,11 @@
 
 @import './components/general/button';
 @import './components/general/heading';
-@import './components/general/services';
+@import './components/general/servicesProduct';
 @import './components/general/ContactUsCol';
 @import './components/general/footerItem';
+@import './components/general/CareerProduct';
+
 
 
 

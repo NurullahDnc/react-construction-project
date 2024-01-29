@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function BrandItem({text}) {
+export default function BrandItem({img}) {
   return (
     <div className='brandItem'>
         
-        {text}
+        <img className='brandItem-img' src={img} alt='' />
       
     </div>
   )

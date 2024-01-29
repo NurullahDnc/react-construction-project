@@ -7,7 +7,7 @@ export default function Project() {
   return (
     <PageContainers>
 
-    <div>
+      <div>
         <ProjectComps />
      </div>
     </PageContainers>
