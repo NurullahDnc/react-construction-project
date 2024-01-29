@@ -10,6 +10,28 @@
 
 // Components
 @import './components/navbar';
+@import './components/banner';
+@import './components/homeProject.scss';
+@import './components/contactUs';
+@import './components/HomeCareer';
+@import './components/footer';
+@import './components/homeBrand';
+@import './components/ProjectComps';
+@import './components/aboutComps';
+@import './components/CareerComps';
+@import './components/contactComps';
+
+
+
+
+//general
+
+@import './components/general/button';
+@import './components/general/heading';
+@import './components/general/servicesProduct';
+@import './components/general/ContactUsCol';
+@import './components/general/footerItem';
+@import './components/general/CareerProduct';
 
 
 

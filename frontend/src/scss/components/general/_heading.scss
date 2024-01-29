@@ -1,0 +1,48 @@
+
+
+.Heading{
+    width: 650px;
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+ 
+    @include mobil {
+        padding: 10px;
+        width: 90%;
+    }
+
+    &-text{
+        font-size: $smalFont;
+        color: $bg-black;
+        font-weight: 500;
+        @include mobil {
+            font-size: 15px;
+        }
+    }
+
+    &-title{
+        font-weight: bold ;
+        font-size: 45px;
+        color: $main-orange;
+        margin: 15px 0;
+
+        @include mobil {
+           font-size: 17px;
+        }
+    }   
+
+    &-p{
+        line-height: 27px;
+        height: auto;
+        font-family: 'Avenir LT', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        text-indent: 20px;
+
+        @include mobil {
+            font-size: 15px;
+         }
+    }
+}

@@ -1,6 +1,8 @@
 //format?
 /**/
 @import '../variables/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap');
+
 
 *,
 *::before,
@@ -11,16 +13,18 @@
 
 }
 
+ 
+
 html {
     font-size: 16px;
     scrollbar-width: thin;
-
+    box-sizing: border-box;
  
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-     
+    font-family: 'Roboto', sans-serif;
+    background-color: $bg-light; 
 }
 
 section {
@@ -55,6 +59,12 @@ textarea {
 
 ul {
     list-style-type: none;
+    
+    
+:hover{
+    color: $main-orange;
+    transition: 0.7s;
+}
 }
 
 a {
@@ -72,6 +82,4 @@ svg {
     vertical-align: middle;
     user-select: none;
 }
- 
- 
  

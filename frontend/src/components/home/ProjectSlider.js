@@ -1,11 +1,9 @@
 import React from 'react'
 
-export default function Services() {
+export default function ProjectSlider() {
   return (
     <div>
-        services
       
     </div>
   )
 }
-  

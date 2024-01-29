@@ -4,15 +4,21 @@
 //max-width degerlerini break pointsden de alabilriiz
 //content nedir = gelen degerler
 
-@mixin mmobil {
-    @media only screen and (max-width: 400px) {
-        @content
+@mixin mobil {
+    @media only screen and (max-width: 600px) {
+        @content;
     }
 }
 
 @mixin tablet {
-    @media only screen and (min-width: 400px) {
-        @content
+    @media only screen and (min-width: 601px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin laptops {
+    @media only screen and (min-width: 993px) and (max-width: 1200px) {
+        @content;
     }
 }
 
