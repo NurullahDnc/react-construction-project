@@ -2,7 +2,7 @@ from django.shortcuts import render
 from database_conection.models import sql_connection
 import pypyodbc
 
-try:
+def anasayfa(request):
     # Bağlantı dizesindeki bilgileri kendi veritabanı bilgilerinizle güncelleyin.
     db = pypyodbc.connect(
         'Driver={SQL Server};'
@@ -17,10 +17,7 @@ try:
     kullanicilar = imlec.fetchall()
     for i in kullanicilar:
         print(i)
+        return render(request,"pages/anasayfa.html",{"isim":i})
 
-except Exception as e:
-    print(f'Hata: {e}')
-
-finally:
-    # Bağlantıyı kapat
+    
     db.close()
