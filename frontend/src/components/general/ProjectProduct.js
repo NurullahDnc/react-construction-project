@@ -1,9 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-export default function ProjectProduct({img, text}) {
+export default function ProjectProduct({img, text, id}) {
+
+  const navigate = useNavigate();
+
   return (
     <div className='ProjectProduct'>
-      <div className='ProjectProduct-img'>
+      <div onClick={()=> navigate(`/detail/${id}`)} className='ProjectProduct-img'>
         <img className='ProjectProduct-img-imgs' src={img} alt="" />
       </div>
       <div className='ProjectProduct-text'>
@@ -12,4 +16,3 @@ export default function ProjectProduct({img, text}) {
     </div>
   )
 }
-  

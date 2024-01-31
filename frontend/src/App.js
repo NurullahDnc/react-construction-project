@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './page/About';
 import Career from './page/Career';
 import Contact from './page/Contact';
+import Detail from './page/Detail';
 
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/career" element={<Career/>} />
           <Route path='/contact' element={<Contact />} />
+          //detail sayfa yonlendir id ekle
+          <Route path='/detail/:id' element={<Detail />} />
+
 
 
 
