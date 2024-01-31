@@ -16,7 +16,7 @@ export const ProjectSlice = createSlice({
     reducers:{},
     extraReducers: (builder)=> {
         builder.addCase(getProject.fulfilled,(state, action)=>{
-            
+            console.log(as);
         } )
     }
 })
