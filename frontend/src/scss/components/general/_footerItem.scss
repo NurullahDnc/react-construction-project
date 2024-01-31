@@ -1,0 +1,22 @@
+
+
+.footerItem{
+    width: 100%;
+    
+    &-items{
+         text-align: center;
+        font-size: 200;
+
+        li:first-child {
+            // İlk <li> elemanına uygulanacak stil
+            font-weight: 600; 
+            margin: 20px 0;
+            font-size: 22px;
+        }
+
+        li{
+            font-size: 20px;
+            margin: 10px 0;
+        }
+    }
+}
