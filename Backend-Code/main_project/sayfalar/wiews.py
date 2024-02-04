@@ -1,11 +1,12 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-
+from django.shortcuts import get_object_or_404, render
+from .models import Cars
 
 def anasayfa(request):
+    kurslar=Cars.objects.filter(isActive=1)
     return render(request,'pages/anasayfa.html',{
-                  'name':'erkut',
-                  'surname':'elik'})
+                  'kategoiler':kurslar,
+                  })
 
 def iletisim(request):
     data={
@@ -21,3 +22,10 @@ def iletisim(request):
 
 def hakkimizda(request):
     return render(request,"pages/hakkimizda.html")
+
+def details(request,slug):
+    detay_=get_object_or_404(Cars,slug=slug)
+    context={
+        'detay':detay_
+    }
+    return render(request,'pages/details.html',context)
