@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Category({text}) {
+export default function Category({categoryText, CategoryTitle, value}) {
   return (
     <div className='category'>
-      <p>{text} </p>
-    </div>
+ 
+</div>
   )
 }
+
+

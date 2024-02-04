@@ -30,6 +30,9 @@ export default function NavBar() {
             <li className="navbars-right-item-items nav-item">
               <NavLink className="nav-link" to="/contact">İletisim</NavLink>
             </li>
+            <li className="navbars-right-item-items nav-item">
+              <NavLink className="nav-link" to="/admin/login">Admin</NavLink>
+            </li>
           </ul>
         </div>
       </nav>

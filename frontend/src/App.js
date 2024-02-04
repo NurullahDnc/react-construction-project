@@ -19,6 +19,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Popup from './components/popup/Popup';
 import Admin from './admin/Admin';
+import Login from './admin/auth/Login';
 
 
 
@@ -27,7 +28,7 @@ function App() {
 const dispacth = useDispatch();
 
 
-// console.log(useSelector((state)=> state.project));
+console.log(useSelector((state)=> state.project));
 
 const {project, loading, error} = useSelector((state)=> state.project)
 
@@ -62,9 +63,11 @@ if (loading) {
             <Route path='/contact' element={<Contact />} />
             <Route path='/detail/:id' element={<Detail />} />
             <Route path='/admin/*' element={<Admin />} />
+            <Route path='/admin/login' element={<Login />} />
+
 
             
-             <Route path="*" element={<div>sayfa bulunmadı</div>} />
+            <Route path="*" element={<div>sayfa bulunmadı</div>} />
           </Routes>
         <Footer />
 

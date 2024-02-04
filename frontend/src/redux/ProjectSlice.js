@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const getProject = createAsyncThunk('getProject', async () => {
-    const { data } = await axios.get(`https://restcountries.com/v3.1/all`);
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users`);
     return data;
 });
 

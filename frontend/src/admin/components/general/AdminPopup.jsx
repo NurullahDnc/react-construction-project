@@ -11,32 +11,32 @@ const AdminPopup = ({placeholder, ButtonText}) => {
         setIsOpen(!isOpen)
       }
       
-      const handleCreateOpen = ()=>{
+    const handleCreateOpen = ()=>{
         
-        setIsOpen(!isOpen)
-      }
+    setIsOpen(!isOpen)
+    }
 
   return (
     <div>
             {
-        isOpen ? "" : (
-        <div className='adminPopup'  >
-          <div  className='adminPopup-container' >
-            <Input placeholder={placeholder} />
-
-            <Input type={"file"} placeholder={"ad"} />
-
-            <AdminButton text={"adadd"}/>
-            <div onClick={()=> handleCreateClose() } className='adminPopup-container-close'>
-                
-            X
+        isOpen ? (
+          <div className='adminPopup'  >
+            <div  className='adminPopup-container' >
+              <Input placeholder={placeholder} />
+  
+              <Input type={"file"} placeholder={"ad"} />
+  
+              <AdminButton text={"adadd"}/>
+              <div onClick={()=> handleCreateClose() } className='adminPopup-container-close'>
+  
+              X
+            </div>
+            </div>
+          
+          
           </div>
-          </div>
-        
-        
-        </div>
-
-        )
+  
+          ) : ""
       }
       <AdminButton text={ButtonText} onClicks={()=> handleCreateOpen()} />
     </div>

@@ -13,15 +13,15 @@ const AdminMenu = () => {
         },
         {
             id: 2,
-            text: 'Hizmetler',
-            icon: FaCity,
-            url: 'services'
-        },
-        {
-            id: 3,
             text: 'Projeler',
             icon: FaCity,
             url: 'projects'
+        },
+        {
+            id: 3,
+            text: 'Hizmetler',
+            icon: FaCity,
+            url: 'services'
         },
         {
             id: 4,
@@ -34,6 +34,12 @@ const AdminMenu = () => {
             text: 'Karier',
             icon: FaCity,
             url: 'career'
+        },
+        {
+            id: 6,
+            text: 'Mesajlar',
+            icon: FaCity,
+            url: 'message'
         }
 ]      
 
@@ -43,10 +49,10 @@ const AdminMenu = () => {
             <ol className='AdminMenu-container'>
 
                 {
-                    navLinks.map(item => (
-                        <li className='AdminMenu-container-item'>
+                    navLinks.map((item, i) => (
+                        <li key={i} className='AdminMenu-container-item'>
                             {item.icon && <item.icon />}
-                            <Link to={item.url}  >{item.text} </Link>
+                            <Link  to={item.url}  >{item.text} </Link>
                         </li>
                     ))
                 }

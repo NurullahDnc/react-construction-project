@@ -1,11 +1,16 @@
 // AdminRoutes.js
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Dashboard from '../page/Dashboard';
 import AdminMenu from '../components/menu/AdminMenu';
 import AdminProject from '../page/AdminProject';
-import AdminProjectCreate from '../page/AdminProjectCreate';
- 
+
+import Services from '../components/servicess/Services';
+import ProjectsCreate from '../components/project/ProjectsUpdate';
+import Dashboard from '../page/Dashboard';
+import About from '../page/About';
+import Career from '../page/Career';
+import Message from '../page/Message';
+  
 
 const AdminRoutes = () => {
   return (
@@ -17,11 +22,14 @@ const AdminRoutes = () => {
         <div className='AdminRoutes-right' >
         <Routes>
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/services" element={<AdminProject />} />
+                <Route path="/services" element={<Services />} />
                 <Route path="/projects" element={<AdminProject />} />
-                <Route path="/projectCreate" element={<AdminProjectCreate />} />
-                <Route path="/about" element={<AdminProject />} />
-                <Route path="/career" element={<AdminProject />} />
+                <Route path="/productcreate/:id" element={<ProjectsCreate />} />
+
+                <Route path="/about" element={<About />} />
+                <Route path="/career" element={<Career />} />
+                <Route path="/message" element={<Message />} />
+
                 <Route path="*" element={<div>sayfa bulunamadı</div>} />
 
 

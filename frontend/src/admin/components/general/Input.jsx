@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Input = ({name, text, type, value, placeholder}) => {
+const Input = ({name, text, type, value, placeholder, onChange}) => {
+
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    console.log("afdw");
+  };
+
   return (
     <div className='inputGeneral' >
       <label htmlFor="">{text}</label>
       <input 
         className='inputGeneral-input'
-        type={type} 
+        onChange={handleInputChange}
         name={name} 
+        type={type} 
         value={value} 
-        placeholder={placeholder} />
+        placeholder={placeholder} 
+      />
+
+
     </div>
 
   )
