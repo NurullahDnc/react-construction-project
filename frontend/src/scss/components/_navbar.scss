@@ -10,6 +10,8 @@
             color: black;
 
         }
+
+        
     }
     &-left {
         @extend %navbar-border;
@@ -34,7 +36,11 @@
 
             &-items {
                 padding: 0 20px;
-
+    
+                :hover{
+                    color: $main-orange;
+                    transition: 0.4s;
+                }
             }
         }
     }

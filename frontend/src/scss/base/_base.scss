@@ -13,6 +13,22 @@
 
 }
 
+
+//loading islemi
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* yarı şeffaf beyaz bir arkaplan */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* modalın diğer elemanlar üzerinde olmasını sağlar */
+  }
+  
  
 
 html {
@@ -60,16 +76,19 @@ textarea {
 ul {
     list-style-type: none;
     
-    
-:hover{
-    color: $main-orange;
-    transition: 0.7s;
-}
+
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+        transition: 0.7s;
+        
+    }
 }
 
 img {

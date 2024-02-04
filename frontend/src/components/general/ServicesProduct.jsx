@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ScrollReveal from 'scrollreveal';
 
 
 export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
+
+  useEffect(()=>{
+    ScrollReveal().reveal(".services-image", {
+      scale: 1.1
+    })
+
+  },[])
+
   return (
     <div className='services'>
         
@@ -10,10 +19,10 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
         </div>
 
         <div className='services-text'>
-            <Icon size="30px" />
-            <h1>Ticari insaat</h1>
-            <p>Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.</p>
-            <p>Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.</p>
+            <Icon className="services-text-icon" size="30px" />
+            <h1>{title} </h1>
+            <p>{text1} </p>
+            <p>{text2} </p>
 
         </div>
 

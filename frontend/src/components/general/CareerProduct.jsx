@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../general/Button'
+import ScrollReveal from 'scrollreveal';
+
 
 
 export default function CareerProduct( {title, text, buttonText, url } ) {
-  console.log(url);
+
+  useEffect(() => {
+    ScrollReveal().reveal('.CareerProduct', {
+      interval: 500,
+      duration: 1000,
+      rotate: {x:10, y:10}
+      
+    });
+  }, []);
+
   return (
     <div className='CareerProduct'>
         

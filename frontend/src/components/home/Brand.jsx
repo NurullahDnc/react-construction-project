@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BrandItem from '../general/BrandItem'
 import Heading from '../general/Heading'
+import ScrollReveal from 'scrollreveal';
+
 
 export default function Brand() {
 
@@ -19,6 +21,7 @@ export default function Brand() {
   ]
 
   
+  
   return (
     <div className='brand'>
 
@@ -27,8 +30,8 @@ export default function Brand() {
       <div className='brand-items'>
 
         {
-          brand.map(item => (
-            <BrandItem img={item.img} />
+          brand.map((item, i) => (
+            <BrandItem key={i} img={item.img} />
           ))
         }
 
