@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 {% block title %} 
-Anasayfa<br>
-<p>{{ isim }}</p>
+{% for kategoriler_ in kategoiler %}
+
+    Anasayfaaaa<br>
+    <h1 style='margin-left: 500px;'>{{kategoriler_.title}}</h1>
+
+{% endfor %}
 
 
 

@@ -1,11 +1,12 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Cars
 
 def anasayfa(request):
+    kurslar=Cars.objects.filter(isActive=1)
     return render(request,'pages/anasayfa.html',{
-                  'name':'erkut',
-                  'surname':'elik'})
+                  'kategoiler':kurslar,
+                  })
 
 def iletisim(request):
     data={
