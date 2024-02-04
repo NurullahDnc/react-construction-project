@@ -1,12 +1,10 @@
 {% extends "layout.html" %}
 {% block title %} 
-{% for kategoriler_ in kategoiler %}
-
-    Anasayfaaaa<br>
-    <h1 style='margin-left: 500px;'>{{kategoriler_.title}}</h1>
-
-{% endfor %}
-
+<h3 style="margin-left: 100px;">Anasayfa</h3>
+    {% for kategoriler_ in kategoiler %}
+    <h1 style='margin-left: 100px;' ><a style="color: black;" href="kategori/{{kategoriler_.slug}}">{{kategoriler_.title}}</a></h1>
+    {% endfor %}
+    
 
 
 
