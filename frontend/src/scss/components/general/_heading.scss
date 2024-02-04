@@ -3,7 +3,7 @@
 .Heading{
     width: 650px;
     margin: 10px 0;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -29,7 +29,7 @@
         margin: 15px 0;
 
         @include mobil {
-           font-size: 17px;
+           font-size: 21px;
         }
     }   
 

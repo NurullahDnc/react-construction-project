@@ -50,17 +50,17 @@ export default function HomeCareer() {
       <div className='HomeCareer'  >
         <div className='HomeCareer-ServicesText'>
           <Heading text="Hizmetlerimiz" title="İhtiyaçlarınıza Yönelik Bir Dizi Hizmet Sunuyoruz" p="Bu, bir paragraf. Kendi metninizi eklemek için buraya tıklayın. Kullanıcılara kendinizi tanıtın." />
-          <Button text="daha fazla " />
+          <Button text="daha fazla" url={"/service"} />
 
         </div>
         <div>
 
           <div className='career'>
-          {
-            careerData.map((item, i)=>(
-              <CareerProduct title={item.title} text={item.text} buttonText={item.buttonText} url={item.url} />
-            ))
-          }
+            {
+              careerData.map((item, i)=>(
+                <CareerProduct key={i} title={item.title} text={item.text} buttonText={item.buttonText} url={item.url} />
+              ))
+            }
         </div>
         </div>
 

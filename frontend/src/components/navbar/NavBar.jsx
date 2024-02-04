@@ -1,4 +1,5 @@
 import React from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
@@ -9,7 +10,7 @@ export default function NavBar() {
           <NavLink className="navbars-left-items navbar-brand" to="/">Logo</NavLink>
         </div>
         <button className=" navbars-menu navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbars-menu-btn navbar-toggler-icon"></span>
+          <span className="navbars-menu-btn navbar-toggler-icon"><GiHamburgerMenu/> </span>
         </button>
         <div className="navbars-right collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbars-right-item navbar-nav ml-auto">

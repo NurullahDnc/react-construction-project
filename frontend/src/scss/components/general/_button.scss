@@ -10,6 +10,13 @@
     border: $main-orange 1px solid;
     transition: 0.9s;
 
+    a{
+         &:hover{
+            color: $text-white;
+            text-decoration: none;
+        }
+    }
+
     &:hover{
         background-color: $bg-black;
         color: $text-white;

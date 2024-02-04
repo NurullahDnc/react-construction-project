@@ -1,0 +1,32 @@
+
+.AdminMenu{
+    display: flex;
+    align-items: center;
+
+    &-container{
+
+        width: 100%;
+
+        h2{
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        &-item{
+            width: 100%;
+            font-size: 21px;
+            padding-left: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            line-height: 50px;
+            margin: 10px 0;
+
+    
+
+            :Link{
+                color: $main-orange;
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../general/Heading'
 import CareerProduct from '../general/CareerProduct'
+import HomeCareer from '../home/HomeCareer'
 
 
 export default function CareerComps() {
@@ -44,6 +45,8 @@ export default function CareerComps() {
     }
 
   ]
+
+  HomeCareer(careerData)
 
   return (
     <div >

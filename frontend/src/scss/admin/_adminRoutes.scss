@@ -1,0 +1,25 @@
+
+//adminroutes
+.AdminRoutes{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    &-left{
+        width: 20%;
+        height: 100vh;
+        background-color: $bg-gray;
+
+    }
+
+    &-right{
+        width: 80%;
+        padding: 0 25px;
+        height: auto;
+     }
+}
+
+//adminroutes container 
+
+.admin-container{
+    margin-top: 6rem;
+}

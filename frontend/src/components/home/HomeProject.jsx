@@ -14,7 +14,7 @@ export default function HomeProject() {
         <div className='home-container-title' >
 
           <Heading text=" İnşaat Bizim İşimiz" title="Kaliteli Projelerin İlk Adresi MCR İnşaat" />
-          <Button text="daha fazla " />
+          <Button text="daha fazla " url={"/project"} />
 
         </div>
 

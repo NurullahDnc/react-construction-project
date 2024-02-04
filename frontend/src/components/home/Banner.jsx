@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../general/Button'
+import ScrollReveal from 'scrollreveal';
+
 
 export default function Banner() {
+  useEffect(()=>{
+    ScrollReveal().reveal(".banner-text", {
+ 
+      distance: "190px", 
+      origin: "left",
+      duration: 1000
+      
+    })
+  },[])
+
   return (
     <div className='banner' >
       <div >
@@ -14,7 +26,7 @@ export default function Banner() {
         <h1 className='banner-text-title' >Saglam bir gelecek insası</h1>
         <p className='banner-text-p' >1968'den Beri Dürüst, Güvenilir İnşaat</p>
 
-        <Button text="bize ulas" />
+        <Button text="bize ulaş" url={"/contact"} />
 
       </div>
 

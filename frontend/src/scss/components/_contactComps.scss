@@ -1,5 +1,4 @@
 
-
 .ContactComps{
 
     width: 100%;
@@ -20,21 +19,21 @@
 
         &-item{
             width: 100%;
-            color: black;
+            color: $bg-black;
 
             input{
                 padding: 15px 20px;
                 margin: 10px  30px;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid $bg-black;
 
          
                 ::placeholder{
-                    color: black;
+                    color: $bg-black;
                 }
             }
 
             textarea{
-                border: 1px black solid;
+                border: 1px $bg-black solid;
                 margin: 25px  30px;
                 padding: 10px;
 

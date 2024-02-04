@@ -1,45 +1,48 @@
-//hizmetler sayfası
-
-.services{
+.services {
     width: 100%;    
     display: flex;
     align-items: center;
-    justify-content: center;
     margin: 15px 0;
-
+    justify-content: center;
+ 
     @include mobil {
-
         display: block;
     }
 
-    &-image{
+    //img  ve text divlerini ters ceeviriyor
+    &:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+ 
+    &-image {
         width: 50%;
-        height: 700px;
+        height: 550px;
         display: flex;        
         justify-content: center;
 
-        &-img{
+        &-img {
             height: 100%;
-            background-size: cover  ;
-
+            background-size: cover;
         }
+
         @include mobil {
             width: 100%;
-         }
-
-        
+            height: auto;
+        }
     }
-    &-text{
+
+    &-text {
         width: 50%;
         text-indent: 25px;
         text-align: center;
 
+        &-icon{
+            margin: 10px 0;
+        }
 
         @include mobil {
             width: 100%;
             padding: 25px 0;
-
-         }
+        }
     }
-    
 }

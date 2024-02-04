@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router'
+import ScrollReveal from 'scrollreveal';
 
 export default function DetailComps() {
 
@@ -91,6 +92,22 @@ export default function DetailComps() {
 
 
   console.log(newData);
+
+  useEffect(()=>{
+    ScrollReveal().reveal(".DetailComps-left",{
+
+      distance: "150px",
+      origin: "left",
+      duration: 2000
+    })
+
+    ScrollReveal().reveal(".DetailComps-right",{
+      duration: 2000,
+      origin: "right",
+      distance: "150px",
+     })
+
+  },[])
 
 
   return (
