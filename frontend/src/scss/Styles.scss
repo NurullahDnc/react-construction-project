@@ -20,6 +20,10 @@
 @import './components/aboutComps';
 @import './components/CareerComps';
 @import './components/contactComps';
+@import './components/DetailComps.scss';
+@import './components/popup';
+
+
 
 
 
@@ -32,9 +36,23 @@
 @import './components/general/ContactUsCol';
 @import './components/general/footerItem';
 @import './components/general/CareerProduct';
+@import './components/general/pageTitle';
 
 
 
 
 
-// Pages
+
+// admin
+
+@import './admin/adminRoutes';
+@import './admin/adminMenu';
+@import './admin/generel/general';
+@import './admin/projectCreate';
+@import './admin/login';
+
+
+
+
+
+

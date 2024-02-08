@@ -1,0 +1,47 @@
+
+//popup
+.Popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 11000;
+
+
+    &-container {
+        width: 35%;
+        height: auto;
+        padding: 30px;
+        background-color: $text-white;
+        color: $black-color;
+
+        @include mobil {
+            width: 95%;
+        }
+
+        &-text {
+            overflow: auto;
+            text-indent: 25px;
+            max-height: 250px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            margin-top: 20px;
+
+            button {
+                width: 130px;
+                padding: 10px 0;
+                outline: none;
+                border: solid 1px $bg-black;
+            }
+        }
+
+    }
+}

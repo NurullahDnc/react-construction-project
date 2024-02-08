@@ -1,0 +1,53 @@
+
+.AdminMenu{
+    display: flex;
+    align-items: center;
+
+    &-container{
+
+        width: 100%;
+
+        h2{
+            text-align: center;
+            margin: 20px 0;
+            font-size: 14px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid black;
+
+            @include mobil{
+                font-size: 17px;
+                padding: 10px 5px;
+            }
+        }
+        
+        &-item{
+            width: 100%;
+            font-size: 21px;
+            padding-left: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            line-height: 50px;
+            margin: 10px 0;
+
+            @include mobil{
+                font-size: 15px;
+                padding-left: 5px;
+
+            }
+    
+
+            :Link{
+                color: $main-orange;
+                padding-left: 10px;
+
+                @include mobil{
+                    padding-left: 5px;
+                    
+                    
+    
+                }
+                
+            }
+        }
+    }
+}

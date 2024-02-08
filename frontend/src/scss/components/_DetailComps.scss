@@ -1,0 +1,49 @@
+
+.DetailComps{
+    width: 100%;
+    display: flex;
+    margin: 50px 0;
+
+    @include mobil{
+        display: block;
+        margin: 0;
+    }
+
+
+    &-left{
+        width: 60%;
+        height: auto;
+        padding: 25px;
+
+        @include mobil{
+            width: 100%;
+            padding: 0;
+        }
+
+        &-img{
+             width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-right{
+        width: 40%;
+         padding: 25px; 
+         margin-top: 30px;
+
+         @include mobil{
+            width: 100%;
+            padding: 5px;
+        }
+
+        p{
+          line-height: 24px;  
+        }
+       
+    }
+
+  
+    
+
+}
