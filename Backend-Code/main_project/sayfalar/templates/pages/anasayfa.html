@@ -1,8 +1,11 @@
-{% extends "layout.html" %}
-{% block title %} 
+<!-- {% extends "layout.html" %}
+{% block title %}  -->
 <h3 style="margin-left: 100px;">Anasayfa</h3>
     {% for kategoriler_ in kategoiler %}
-    <h1 style='margin-left: 100px;' ><a style="color: black;" href="kategori/{{kategoriler_.slug}}">{{kategoriler_.title}}</a></h1>
+<!-- 
+
+    <h1 style='margin-left: 100px;' ><a style="color: black;" href="kategori/{{kategoriler_.slug}}">{{kategoriler_.title}}</a></h1> -->
+    {{kategoriler_}}
     {% endfor %}
     
 

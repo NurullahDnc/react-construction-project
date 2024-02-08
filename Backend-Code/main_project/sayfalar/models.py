@@ -15,3 +15,9 @@ class Cars(models.Model):
 class kategoriler(models.Model):
     name=models.CharField(max_length=40)
     slug=models.CharField(max_length=50)
+
+
+
+class Item(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()

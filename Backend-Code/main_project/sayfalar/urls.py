@@ -1,16 +1,15 @@
-
 from django.contrib import admin
 from django.urls import path
-from . import wiews
-
+from . import views
+from .views import anasayfa, hakkimizda, iletisim, details, ItemList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',wiews.anasayfa),
-    path('anasayfa',wiews.anasayfa),
-    path('hakkimizda',wiews.hakkimizda),
-    path('iletisim',wiews.iletisim),
-    path('kategori/<slug>',wiews.details),
-    # path('kategori/<int:category_id>',views.details),
-    # path('kategori/<str:category_name>',views.),
+    path('', views.anasayfa),
+    # path('anasayfa', views.anasayfa),
+    path('hakkimizda', views.hakkimizda),
+    path('iletisim', views.iletisim),
+    path('kategori/<slug>', views.details),
+    path('anasayfa', views.anasayfa, name='mymodel-list'),
 ]
+
