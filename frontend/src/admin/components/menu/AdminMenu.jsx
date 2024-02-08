@@ -1,6 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaCity } from "react-icons/fa6";
+import { Link, useNavigate } from 'react-router-dom'
+import { MdDashboard } from "react-icons/md";
+import { FaCity } from "react-icons/fa";
+import { AiFillMessage } from "react-icons/ai";
+import { useDispatch, useSelector } from 'react-redux';
+import { logout as logoutHandle } from '../../../redux/AuthSlice'
+// logout tekrardan isim verdim hata veriyor caksıma?
+import { getAuth, signOut } from "firebase/auth";
+import { toast } from 'react-toastify';
+import { FaUser } from "react-icons/fa";
+
 
 const AdminMenu = () => {
 
@@ -8,7 +17,7 @@ const AdminMenu = () => {
         {
             id: 1,
             text: 'Dashboard',
-            icon: FaCity,
+            icon: MdDashboard,
             url: 'dashboard'
         },
         {
@@ -38,21 +47,66 @@ const AdminMenu = () => {
         {
             id: 6,
             text: 'Mesajlar',
-            icon: FaCity,
+            icon: AiFillMessage,
             url: 'message'
+        },
+        {
+            id: 7,
+            text: 'Yeni Kulanıcı',
+            icon: FaUser,
+            url: 'user'
         }
-]      
+    ]
 
-  return (
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const {user, logout} = useSelector((state)=> state.auth)
+    // console.log(users, "as");
+
+  
+    if (!user) {
+        navigate("/")
+    }
+    
+    const auth = getAuth();
+
+    const handleLogout= async()=>{
+        dispatch(logoutHandle())
+        await signOut(auth).then(() => {
+            toast.success("Çıkış işlemi başarıyla gerçekleşti");
+            navigate("/")
+
+        }).catch((error) => {
+            toast.error("Çıkış yapma sırasında bir hata oluştu, tekrar deneyiniz");
+        });
+          
+    }
+    return (
         <nav className='AdminMenu'>
 
             <ol className='AdminMenu-container'>
+                <h2>
+                    {/* Admin Panel */}
 
+                    {
+                        user ? <div>
+                            {
+                                user?.email
+                            }
+                        </div> : <p>Giris yapınız</p>
+
+                    }
+
+                    <button onClick={handleLogout} style={{ margin: "0 5px", padding: "5px", border: "2px solid black" }}>Cıkış yap</button>
+
+                </h2>
                 {
                     navLinks.map((item, i) => (
+
                         <li key={i} className='AdminMenu-container-item'>
+
                             {item.icon && <item.icon />}
-                            <Link  to={item.url}  >{item.text} </Link>
+                            <Link to={item.url}  >{item.text} </Link>
                         </li>
                     ))
                 }

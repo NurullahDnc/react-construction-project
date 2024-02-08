@@ -3,7 +3,7 @@
 
     width: 100%;
     display: flex;
-
+ 
     @include mobil{
         display: block;
     }
@@ -30,9 +30,15 @@
                 ::placeholder{
                     color: $bg-black;
                 }
+
+                @include mobil{
+                    width: 265px;
+
+                }
             }
 
             textarea{
+                width: 80%;
                 border: 1px $bg-black solid;
                 margin: 25px  30px;
                 padding: 10px;
@@ -50,6 +56,7 @@
 
         @include mobil{
             width: 100%;
+            height: auto;
             margin: 40px 0;
         }
 

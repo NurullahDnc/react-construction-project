@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../general/Heading'
 import FooterItem from '../general/FooterItem'
+import PageTitle from '../general/PageTitle'
 
 export default function AboutComps() {
 
@@ -34,7 +35,8 @@ export default function AboutComps() {
   ]
   return (
     <div>
-      <Heading text="Hakkımızda" title="Halk İçin İnşa Ediyoruz" />
+      <PageTitle title="Hakkımızda" />
+      <Heading title="Halk İçin İnşa Ediyoruz" />
 
       <div className='AboutComps'>
         <div className='AboutComps-img'>

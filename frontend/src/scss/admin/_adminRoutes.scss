@@ -9,17 +9,25 @@
         height: 100vh;
         background-color: $bg-gray;
 
+        @include mobil{
+            min-width: 30%;
+            height: 86vh;
+        }
     }
 
     &-right{
         width: 80%;
         padding: 0 25px;
         height: auto;
+
+        @include mobil{
+            width: 70%;
+        }
      }
 }
 
 //adminroutes container 
 
 .admin-container{
-    margin-top: 6rem;
+    margin-top: 7rem;
 }
