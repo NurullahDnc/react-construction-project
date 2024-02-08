@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../general/Heading'
 import CareerProduct from '../general/CareerProduct'
 import HomeCareer from '../home/HomeCareer'
+import PageTitle from '../general/PageTitle'
 
 
 export default function CareerComps() {
@@ -50,7 +51,8 @@ export default function CareerComps() {
 
   return (
     <div >
-      <Heading text="Kariyerimiz" title="Başarının Bir Parcası Olun" p="Kariyer Fırsatları Sizi Bekliyor" />
+      <PageTitle title={"Kariyerimiz"} />
+      <Heading title="Başarının Bir Parcası Olun" p="Kariyer Fırsatları Sizi Bekliyor" />
 
       <div className='HomeCareercomps' >
          {

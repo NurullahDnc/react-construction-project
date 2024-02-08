@@ -4,33 +4,55 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
-import Input from '../general/Input';
 import AdminButton from '../general/AdminButton';
- 
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getCategory } from '../../../redux/ProjectSlice';  
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { RxUpdate } from "react-icons/rx";
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function Projects() {
-
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
-  const [inputData, setInputData] = useState([
-    {
+  const [projectData, setProjectData] = useState([]);
+  const { project } = useSelector((state) => state.project)
+  const { category } = useSelector((state) => state.category)
+  const dispacth = useDispatch();
+
+  // const {user} = useSelector((state)=> state.auth)
+  // console.log(user,"xx");
+
+  const {user} = useSelector((state)=> state.auth)
+
+  if (!user) {
+    navigate("/")
+ }
+ 
+
+  useEffect(() => {
+    dispacth(getCategory())
+  }, [dispacth])
+
+  //input verisni tutuyor
+  const [inputData, setInputData] = useState(
+    [{
       id: "id",
       title: "title",
       text: "text",
       img: "img",
       category: "",
 
-    }
-  ]);
-
+    }]
+  );
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'title', headerName: 'title', width: 130 },
-    { field: 'text', headerName: 'text', width: 130 },
-    { field: 'img', headerName: 'img', width: 130 },
-    { field: 'category', headerName: 'category', width: 130 },
+    { field: 'id', headerName: 'ID', width: 150 },
+    { field: 'title', headerName: 'title', width: 150 },
+    { field: 'text', headerName: 'text', width: 250 },
+    { field: 'img', headerName: 'img', width: 250 },
+    { field: 'category', headerName: 'category', width: 100 },
 
     {
       field: "delete",
@@ -40,7 +62,7 @@ export default function Projects() {
         return (
           //ürünün id ve resmi paramete olarak gonderiyoruz iki taraftan silmesi icin
           <button onClick={() => handleDelete(params)} className="mx-4 text-red-500 cursor-pointer ">
-            Sil
+            <RiDeleteBin6Line size={24} />
           </button>
         )
       }
@@ -53,69 +75,73 @@ export default function Projects() {
       renderCell: (params) => {
         return (
           //ürünün id ve resmi paramete olarak gonderiyoruz iki taraftan silmesi icin
-          <button onClick={()=> navigate(`/admin/productcreate/${params.id}`) } className="mx-4 text-red-500 cursor-pointer ">
-            Güncelle
+          <button onClick={() => navigate(`/admin/productupdate/${params.id}`)} className="mx-4 text-red-500 cursor-pointer ">
+            <RxUpdate size={24} />
           </button>
         )
       }
     },
   ];
 
-  const rows = [
-    { id: 1, title: 'Snow', text: 'Jon', img: 35, category: "asda", delete: "", update: "" },
-    { id: 10, title: 'Snow', text: 'Jon', img: 35, category: "asda", delete: "", update: "" },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  ];
+  //reduxtan gelen veri uzerinde map don ekrana bastır
+  const rows = project.map((item) => (
+    {
+      id: item.id,
+      title: item.title,
+      text: item.text,
+      img: item.img,
+      category: item.category
 
+    }))
+
+
+  //delete
   const handleDelete = async (params) => {
     console.log(params.id);
-    const { id } = params.id
-    const res = axios.delete(`/api/${id}`)
-      .then((res) => {
+    const id = params.id
+    axios.delete(`http://localhost:3001/project/${id}`)
+      .then(() => {
         toast.success("silme islemi basarılı")
+        navigate(0);
       })
       .catch((err) => {
-        toast.error("silme isleminde hata olustu")
+        toast.error("silme isleminde hata olustu", err)
       })
+
   }
 
-  const handleCreateClose = () => {
+  //proje olsuturma popup kapat aç
+  const handleOpenClose = () => {
     setIsOpen(!isOpen)
   }
 
-  const handleCreateOpen = () => {
-
-    setIsOpen(!isOpen)
-  }
-
+  //inputtan veri alma
   const handleInputChange = (e) => {
     setInputData((prevData) => ({
       ...prevData,
-      [e.target.name]: e.target.value
-    }));  
+      [e.target.name]: e.target.value, id: uuidv4()
+    }));
   };
+  
 
-  const handleClick =async (e) => {
+  //proje olustur
+  const handleClick = async (e) => {
     e.preventDefault();
-    
-    const res = await axios.post("/api/",inputData)
-    .then((res)=>{
-      toast.success("başsarılı sekilde eklendi")
-      console.log(inputData);
-      setInputData({title: "", text: "", img: "" })
-    })
-    .catch((err)=>{
-      toast.error("Bir hata olsutu", err.status)
-      console.log(err);
-    })
-   
+
+    await axios.post("http://localhost:3001/project/", inputData)
+      .then(() => {
+        toast.success("başsarılı sekilde eklendi")
+        setIsOpen(!isOpen)
+        navigate(0)
+
+        setInputData({ title: "", text: "", img: "" })
+
+      })
+      .catch((err) => {
+        toast.error("Bir hata olsutu", err.status)
+        console.log(err);
+      })
+
 
   }
 
@@ -165,7 +191,7 @@ export default function Projects() {
                 <input
                   onChange={handleInputChange}
                   className='inputGeneral-input'
-                   name='img'
+                  name='img'
                   value={inputData.img}
                   type="file"
                   required
@@ -175,19 +201,19 @@ export default function Projects() {
               </div>
 
               <div className='category'>
-                <select name='category' onChange={handleInputChange} class="form-select category-selectet " aria-label="Default select example">
-                  <option disabled selected>CategoryTitle</option>
-                  <option value={inputData.category}>İnssat</option>
-                  <option value={inputData.category}>depo</option>
-                  <option value={inputData.category}>deneme</option>
+                <select name='category' onChange={handleInputChange} className="form-select category-selectet " aria-label="Default select example">
+                  <option disabled selected>Kategori Seç</option>
 
+                  {
+                    category.map((item, i) => <option key={i} value={inputData.category}>{item.name} </option>)
+                  }
 
                 </select>
               </div>
 
 
               <AdminButton type="submit" text={"Proje Oluştur"} />
-              <div onClick={() => handleCreateClose()} className='adminPopup-container-close'>
+              <div onClick={() => handleOpenClose()} className='adminPopup-container-close'>
                 X
               </div>
             </form>
@@ -197,7 +223,7 @@ export default function Projects() {
 
         ) : ""
       }
-      <AdminButton text={"Proje Olustur"} onClicks={() => handleCreateOpen()} />
+      <AdminButton text={"Proje Olustur"} onClicks={() => handleOpenClose()} />
 
     </div>
   );

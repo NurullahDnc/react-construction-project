@@ -11,7 +11,7 @@
     
         @include  mobil{
             width: 100%;
-    
+            
         }
         
     }
@@ -28,8 +28,9 @@
     justify-content: center;
 
     @include  mobil{
-        width: 30% ;
-        margin: 0;        
+        width: 33% ;
+        margin: 0;  
+        padding: 15px;      
     }
 
      
