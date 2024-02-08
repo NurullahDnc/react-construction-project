@@ -20,6 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Popup from './components/popup/Popup';
 import Admin from './admin/Admin';
 import Login from './admin/auth/Login';
+import Register from './admin/auth/register';
 
 
 
@@ -27,8 +28,7 @@ function App() {
 
 const dispacth = useDispatch();
 
-
-console.log(useSelector((state)=> state.project));
+// console.log(useSelector((state)=> state.project));
 
 const {project, loading, error} = useSelector((state)=> state.project)
 
@@ -36,11 +36,11 @@ useEffect(()=>{
   dispacth(getProject())
 },[dispacth]) 
 
-// console.log(error);
+// if (loading) {
+//   return <div className='loading'>Yükleniyor...</div>;
+// }
 
-if (loading) {
-  return <div className='loading'>Yükleniyor...</div>;
-}
+ 
 
   return (
     <div className="App">
@@ -64,6 +64,7 @@ if (loading) {
             <Route path='/detail/:id' element={<Detail />} />
             <Route path='/admin/*' element={<Admin />} />
             <Route path='/admin/login' element={<Login />} />
+            <Route path='/admin/register' element={<Register />} />
 
 
             
@@ -78,6 +79,6 @@ if (loading) {
 
 export default App;
 
-
+/* sunucu baslatma = npx json-server --watch src/api/project.json --port 3001 */
 /*product'ta ,onclick yazdık tıklandıgında, id url atıyor dinamik olarak, id gore yonlendirme yapıyor? */
   

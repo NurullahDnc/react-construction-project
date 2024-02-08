@@ -4,8 +4,9 @@ import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   return (
-    <div className='navbars container fixed-top'>  
-      <nav className="navbar navbar-expand-lg sticky-top">  
+    <div className='navbarGenral'>
+      <div className='navbars container'>  
+      <nav className="navbar navbar-expand-lg  ">  
         <div className='navbars-left'>
           <NavLink className="navbars-left-items navbar-brand" to="/">Logo</NavLink>
         </div>
@@ -36,6 +37,7 @@ export default function NavBar() {
           </ul>
         </div>
       </nav>
+    </div>
     </div>
   );
 }

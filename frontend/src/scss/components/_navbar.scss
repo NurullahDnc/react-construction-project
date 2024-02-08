@@ -1,7 +1,18 @@
-.navbars {
 
+.navbarGenral{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.navbars {
     color: $text-white;
-    margin-top: 20px;
+    margin-top: 8px;
+    background-color: rgba(255, 85, 0, 0.8);
+    border-radius: 20px;
+    z-index: 1000;
+    position: absolute;
+ 
 
     &-menu{
         color: red;
@@ -37,10 +48,7 @@
             &-items {
                 padding: 0 20px;
     
-                :hover{
-                    color: $main-orange;
-                    transition: 0.4s;
-                }
+               
             }
         }
     }
@@ -66,24 +74,4 @@
 
 
 
-
-//as mobil moda geldi mi calış
-
-.as {
-    color: aqua;
-
-    &-asd1 {
-        color: aquamarine;
-
-    }
-
-    &-asd2 {
-        color: red;
-
-    }
-
-    //responsive
-    // @include mobil {
-    //     color: black;
-    // }
-}
+ 
