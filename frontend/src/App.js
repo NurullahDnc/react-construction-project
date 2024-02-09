@@ -36,7 +36,7 @@ function App() {
   useEffect(() => {
     dispacth(getProject())
   }, [dispacth])
-
+  console.log(project);
 
   // if (loading) {
   //   return <div className='loading'>Yükleniyor...</div>; ne oldu,bionluktan soru sordum bakarmısınızyazdım cevap 
@@ -45,11 +45,23 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:8000/iletisim')
       .then((res) => {
-        console.log(res.data)
-        setData(res.data)
+        setData(res.data.cars)
+  console.log(res.data,"res.data")
+
       })
       .catch((err) => console.log(err))
   }, [])
+
+  console.log(data,"datastate")
+
+
+  // data && data.map(i =>{
+  //   console.log(i)s
+  // })
+
+ 
+
+
 
 
   return (
@@ -61,11 +73,13 @@ function App() {
 
       {/* <Popup /> */}
 
-      {data.map((item, i) => (
-          <div key={i}>
-            {item.name}
-          </div>
-        ))}
+      {data && data.map((item, i) => (
+  <div key={i}>
+   {
+   item?.model}
+   <a href="item"></a>
+  </div>
+))}
 
       <Router>
 

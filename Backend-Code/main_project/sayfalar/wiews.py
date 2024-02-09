@@ -9,13 +9,11 @@ def anasayfa(request):
                   })
 
 def iletisim(request):
-    data = [
-        {'name': 'isim', 'value': 'Değer1'},
-        {'name': 'soyisim', 'value': 'Değer2'},
-        {'name': 'sayı', 'value': 42},
-    ]
+    cars = Cars.objects.all()
+    car_list = [{"id": car.id, "title": car.title, "model": car.description} for car in cars]
+    return JsonResponse({"cars": car_list})
 
-    return JsonResponse(data, safe=False)
+    # return JsonResponse(data, safe=False)
 
     # return JsonResponse(data)   
 
