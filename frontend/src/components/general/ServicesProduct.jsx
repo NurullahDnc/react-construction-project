@@ -19,7 +19,7 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
         </div>
 
         <div className='services-text'>
-            <Icon className="services-text-icon" size="30px" />
+            <Icon className="services-text-icon" size="50" />
             <h1>{title} </h1>
             <p>{text1} </p>
             <p>{text2} </p>
@@ -29,3 +29,4 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
     </div>
   )
 }
+

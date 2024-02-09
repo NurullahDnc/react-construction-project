@@ -13,7 +13,7 @@ export default function ProjectComps() {
   const dispacth = useDispatch();
 
   const [selectedProject, setSelectedProject] = useState("Tümü");
-  const { project, loading, error } = useSelector((state) => state.project)
+  const { project, loading, error } = useSelector((state) => state.project) 
   const {category} = useSelector((state)=> state.category)
 
 

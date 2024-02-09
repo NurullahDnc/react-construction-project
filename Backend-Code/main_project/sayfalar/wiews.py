@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from django.shortcuts import get_object_or_404, render
 from .models import Cars
 
@@ -9,12 +9,17 @@ def anasayfa(request):
                   })
 
 def iletisim(request):
-    data={
-        'name':'isim',
-        'surnama':'soyisim',
-        'number':'sayı',
-    }
+    data = [
+        {'name': 'isim', 'value': 'Değer1'},
+        {'name': 'soyisim', 'value': 'Değer2'},
+        {'name': 'sayı', 'value': 42},
+    ]
 
+    return JsonResponse(data, safe=False)
+
+    # return JsonResponse(data)   
+
+    
     return render (request,'pages/iletisim.html',{
         'veri':data.keys(),
         'deger':data.values()
