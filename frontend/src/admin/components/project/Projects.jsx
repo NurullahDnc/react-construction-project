@@ -37,15 +37,15 @@ export default function Projects() {
 
   //input verisni tutuyor
   const [inputData, setInputData] = useState(
-    [{
-      id: "id",
-      title: "title",
-      text: "text",
-      img: "img",
+    {
+      id: "",
+      title: "",
+      text: "",
+      img: "",
       category: "",
-
-    }]
+    }
   );
+  
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 150 },
@@ -75,7 +75,7 @@ export default function Projects() {
       renderCell: (params) => {
         return (
           //ürünün id ve resmi paramete olarak gonderiyoruz iki taraftan silmesi icin
-          <button onClick={() => navigate(`/admin/productupdate/${params.id}`)} className="mx-4 text-red-500 cursor-pointer ">
+          <button onClick={() => navigate(`/admin/product/update/${params.id}`)} className="mx-4 text-red-500 cursor-pointer ">
             <RxUpdate size={24} />
           </button>
         )
@@ -166,7 +166,7 @@ export default function Projects() {
             <form onSubmit={handleClick} className='adminPopup-container' >
 
               <div className='inputGeneral'>
-                <h4 >Proje Ekle</h4>
+                <h4 >Proje oluştur</h4>
                 <input
                   onChange={handleInputChange}
                   className='inputGeneral-input'
@@ -177,16 +177,15 @@ export default function Projects() {
                   required
                 />
 
-                <input
+                <textarea 
                   onChange={handleInputChange}
                   className='inputGeneral-input'
                   placeholder='Proje Metini'
-                  name='text'
+                  name='text'  // Bu kısmı 'ar' dan 'text' olarak değiştirin
                   value={inputData.text}
                   type="text"
                   required
-
-                />
+                ></textarea>
 
                 <input
                   onChange={handleInputChange}
@@ -223,7 +222,7 @@ export default function Projects() {
 
         ) : ""
       }
-      <AdminButton text={"Proje Olustur"} onClicks={() => handleOpenClose()} />
+      <AdminButton text={"Proje Oluştur"} onClicks={() => handleOpenClose()} />
 
     </div>
   );

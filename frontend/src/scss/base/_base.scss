@@ -1,8 +1,6 @@
-//format?
 /**/
 @import '../variables/index.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&display=swap');
-
 
 *,
 *::before,
@@ -10,9 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-
 
 //loading islemi
 .loading {
@@ -27,20 +23,37 @@
     justify-content: center;
     align-items: center;
     z-index: 1000; /* modalın diğer elemanlar üzerinde olmasını sağlar */
-  }
-  
- 
+}
 
 html {
     font-size: 16px;
     scrollbar-width: thin;
     box-sizing: border-box;
- 
 }
+
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: $bg-light; 
+    background-color: $bg-light;     
+    color: $text-gray;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: $bg-black;
+    color: $text-white;
+}
+
+//datagrid dark mod calısacak
+body.dark-mode .MuiDataGrid-root,
+body.dark-mode .MuiTableBody-root .MTableBodyRow-root {
+    background-color: $text-gray; /* Arka plan rengi */
+    color: $text-white; /* Metin rengi */
+}
+
+
+body.dark-mode input{
+    color: black;
 }
 
 section {
@@ -75,8 +88,6 @@ textarea {
 
 ul {
     list-style-type: none;
-    
-
 }
 
 a {
@@ -87,7 +98,6 @@ a {
     &:hover {
         color: $text-gray;
         transition: 0.7s;
-        
     }
 }
 
@@ -101,4 +111,3 @@ svg {
     vertical-align: middle;
     user-select: none;
 }
- 

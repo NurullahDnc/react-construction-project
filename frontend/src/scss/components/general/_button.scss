@@ -9,6 +9,7 @@
     height: 60px;
     border: $main-orange 1px solid;
     transition: 0.9s;
+    border-radius: 25px 0;
 
     a{
          &:hover{
@@ -23,7 +24,7 @@
     }
     @include mobil {
         
-        width: 120px;
-        height: 40px;
+        width: 150px;
+        height: 45px;
     }
 }

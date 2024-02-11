@@ -19,9 +19,10 @@
         height: 550px;
         display: flex;        
         justify-content: center;
-
+        padding: 10px;
         &-img {
-            height: 100%;
+            width: 100%;
+            height: auto;
             background-size: cover;
         }
 
@@ -33,9 +34,18 @@
 
     &-text {
         width: 50%;
-        text-indent: 25px;
-        text-align: center;
+        text-indent: 20px;
+        padding: 30px;
+        color: $text-gray;
 
+        h1{
+            color: $main-orange;
+        }
+
+        &-p{
+            color: $text-gray;
+        }
+        
         &-icon{
             margin: 10px 0;
         }
@@ -44,5 +54,18 @@
             width: 100%;
             padding: 25px 0;
         }
+        body.dark-mode & {
+            // Dark mode için özel stiller
+
+            &-p {
+                color: $text-white;
+            }
+
+            &-icon{
+                color: $text-white;
+            }
+        }
     }
+
+ 
 }

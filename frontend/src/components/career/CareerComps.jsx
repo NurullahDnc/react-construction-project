@@ -1,62 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Heading from '../general/Heading'
 import CareerProduct from '../general/CareerProduct'
 import HomeCareer from '../home/HomeCareer'
 import PageTitle from '../general/PageTitle'
-
-
+import { useDispatch, useSelector } from 'react-redux'
+import { getCareer } from '../../redux/CareerSlice'
+ 
 export default function CareerComps() {
 
-  const careerData = [
-    {
-      title: "İnşaat Planlama Mühendisis",
-      text: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Burası, bir hikâye anlatmak ve kullanıcılarınıza kendinizi tanıtmak için harika bir yer.",
-      buttonText: "Simdi Başvur",
-      url: "/"
-    },
 
-    {
-      title: "Resepsiyonist",
-      text: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Burası, bir hikâye anlatmak ve kullanıcılarınıza kendinizi tanıtmak için harika bir yer.",
-      buttonText: "Simdi Başvur",
-      url: "/"
+  // HomeCareer(careerData)
+  const dispacth = useDispatch();
+  const { career} = useSelector((state) => state.career)
 
-    },
-
-    {
-      title: "İnşaat Mühendisi - Kıdemli",
-      text: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Burası, bir hikâye anlatmak ve kullanıcılarınıza kendinizi tanıtmak için harika bir yer.",
-      buttonText: "Simdi Başvur",
-      url: "/"
-
-    },
-    {
-      title: "Şantiye Şefi - Deneyimli",
-      text: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Burası, bir hikâye anlatmak ve kullanıcılarınıza kendinizi tanıtmak için harika bir yer.",
-      buttonText: "Simdi Başvur",
-      url: "/"
-
-    },
-    {
-      title: "Şantiye Şefi - Deneyimli",
-      text: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Burası, bir hikâye anlatmak ve kullanıcılarınıza kendinizi tanıtmak için harika bir yer.",
-      buttonText: "Simdi Başvur",
-      url: "/"
-
-    }
-
-  ]
-
-  HomeCareer(careerData)
+  useEffect(() => {
+    dispacth(getCareer())
+  }, [dispacth])
+  console.log(career);
 
   return (
     <div >
       <PageTitle title={"Kariyerimiz"} />
       <Heading title="Başarının Bir Parcası Olun" p="Kariyer Fırsatları Sizi Bekliyor" />
 
-      <div className='HomeCareercomps' >
+      <div className='Careercomps' >
          {
-          careerData.map((item, i)=>(
+          career.map((item, i)=>(
             <div key={i} >
               <CareerProduct title={item.title} text={item.text} buttonText={item.buttonText} url={item.url} />
 

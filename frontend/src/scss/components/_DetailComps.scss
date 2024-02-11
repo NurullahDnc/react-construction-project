@@ -37,8 +37,17 @@
             padding: 5px;
         }
 
+        h2{
+            color: $main-orange;
+        }
+
         p{
           line-height: 24px;  
+          color: $text-gray;
+
+          body.dark-mode &{
+            color: $text-white;
+          }
         }
        
     }

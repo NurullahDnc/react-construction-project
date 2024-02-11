@@ -15,6 +15,7 @@
 
     &-number{
         font-size: 35px;
+        color: $text-white;
 
      }
 
@@ -22,8 +23,7 @@
 
         padding-bottom: 10px;
         border-bottom: 3px solid $bg-light;
-
-
+        color: $text-white;
 
     }
 }

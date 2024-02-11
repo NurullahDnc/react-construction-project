@@ -20,12 +20,17 @@
         &-item{
             width: 100%;
             color: $bg-black;
+            
 
             input{
                 padding: 15px 20px;
                 margin: 10px  30px;
                 border-bottom: 1px solid $bg-black;
 
+                body.dark-mode &{
+                    border-bottom: 1px solid $text-white;
+                    color: $text-white;
+                }
          
                 ::placeholder{
                     color: $bg-black;
@@ -42,7 +47,11 @@
                 border: 1px $bg-black solid;
                 margin: 25px  30px;
                 padding: 10px;
-
+                
+                body.dark-mode &{
+                    border: 1px solid $text-white;
+                    color: $text-white;
+                }
             }
         }
         Button{

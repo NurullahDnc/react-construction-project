@@ -43,9 +43,11 @@ INSTALLED_APPS = [
 
 ]
 
+# MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # CorsMiddleware'yi bu şekilde ekleyin
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -54,6 +56,10 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
 ]
+CORS_ALLOWED_ORIGINS = [
+ 
+    "http://localhost:3000",    #eklendi
+ ]
 
 ROOT_URLCONF = 'main_project.urls'
 
@@ -70,7 +76,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ],
+                # "corsheaders"    #eklendi
+             ],
         },
     },
 ]

@@ -7,7 +7,6 @@ class categories(models.Model):
 
     def __str__(self) -> str:
         return f"{self.name}".title()
-    
 
 class Cars(models.Model):
     title=models.CharField(max_length=50)
