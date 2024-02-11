@@ -8,6 +8,7 @@ const Admin = () => {
   return (
          <div  className="admin-container">
             <AdminRoutes />
+            
         </div>
    );
 };

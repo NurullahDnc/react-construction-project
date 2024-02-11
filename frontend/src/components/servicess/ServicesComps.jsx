@@ -3,6 +3,7 @@ import Heading from '../general/Heading'
 import Services from '../general/ServicesProduct';
 import { FaCity } from "react-icons/fa6";
 import PageContainers from '../../Containers/PageContainers'
+import PageTitle from '../general/PageTitle';
 
 
 
@@ -70,7 +71,9 @@ export default function ServicesComps() {
   return (
     <PageContainers >
       <div className='servicesComps'>
-      <Heading text="Hizmetlerimiz" title="İhtiyaçlarınıza Yönelik Bir Dizi Hizmet Sunuyoruz" p="Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Kullanıcılara kendinizi tanıtın." />
+      <PageTitle title="Hizmetlerimiz" />
+
+      <Heading  title="İhtiyaçlarınıza Yönelik Bir Dizi Hizmet Sunuyoruz" p="Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Kullanıcılara kendinizi tanıtın." />
 
         {
           servicesData.map((item, id)=>(

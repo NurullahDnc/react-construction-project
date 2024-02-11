@@ -10,6 +10,7 @@ import Dashboard from '../page/Dashboard';
 import About from '../page/About';
 import Career from '../page/Career';
 import Message from '../page/Message';
+import Register from '../auth/register';
   
 
 const AdminRoutes = () => {
@@ -24,11 +25,13 @@ const AdminRoutes = () => {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/projects" element={<AdminProject />} />
-                <Route path="/productcreate/:id" element={<ProjectsCreate />} />
+                <Route path="/productupdate/:id" element={<ProjectsCreate />} />
 
                 <Route path="/about" element={<About />} />
                 <Route path="/career" element={<Career />} />
                 <Route path="/message" element={<Message />} />
+                <Route path="/user" element={<Register />} />
+
 
                 <Route path="*" element={<div>sayfa bulunamadı</div>} />
 
