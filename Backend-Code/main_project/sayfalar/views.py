@@ -33,6 +33,3 @@ def details(request, slug):
     }
     return render(request, 'pages/details.html', context)
 
-class ItemList(generics.ListCreateAPIView):
-    queryset = Item.objects.all()
-    serializer_class = ItemSerializer

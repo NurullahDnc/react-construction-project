@@ -4,12 +4,12 @@ from .models import Cars,categories
 
 @admin.register(Cars)
 class Home_Admin(admin.ModelAdmin):
-    list_display = ("title", "isActive", "slug", "Home_Categori")
+    list_display = ("title", "isActive", "slug", "category")
     list_display_links = ("title", "slug",)
     prepopulated_fields = {"slug": ("title",)}
-    list_filter = ("title", "isActive", "Home_Categori")
+    list_filter = ("title", "isActive", "category")
     list_editable = ("isActive",)
-    search_fields = ("title", "description")
+    search_fields = ("title", "text")
 
 @admin.register(categories)
 class CategoriesAdmin(admin.ModelAdmin):

@@ -11,12 +11,12 @@ class categories(models.Model):
 
 class Cars(models.Model):
     title=models.CharField(max_length=50)
-    description=models.TextField()
-    imageUrl=models.CharField(max_length=50,blank=False)
+    text=models.TextField()
+    img=models.CharField(max_length=50,blank=False)
     date=models.DateField()
     isActive=models.BooleanField()
     slug=models.SlugField(default="",null=False,unique=True,db_index=True,blank=True)
-    Home_Categori=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="kurslar")
+    category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="kurslar")
 
     # def save(self,*args,**kwargs):
     #     self.slug=slugify(self.title)
