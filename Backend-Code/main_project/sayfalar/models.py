@@ -1,20 +1,26 @@
 from django.db import models
 from django.utils.text import slugify
+
+class categories(models.Model):
+    name=models.CharField(max_length=40)
+    slug=models.SlugField(default="",max_length=50,null=False,unique=True,db_index=True)
+
+    def __str__(self) -> str:
+        return f"{self.name}".title()
+    
+
 class Cars(models.Model):
     title=models.CharField(max_length=50)
-    description=models.TextField()
-    imageUrl=models.CharField(max_length=50,blank=False)
+    text=models.TextField()
+    img=models.CharField(max_length=50,blank=False)
     date=models.DateField()
     isActive=models.BooleanField()
-    slug=models.SlugField(default="",null=False,unique=True,db_index=True)
+    slug=models.SlugField(default="",null=False,unique=True,db_index=True,blank=True)
+    category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="kurslar")
 
-    def save(self,*args,**kwargs):
-        self.slug=slugify(self.title)
-        super().save(args,kwargs)
-
-class kategoriler(models.Model):
-    name=models.CharField(max_length=40)
-    slug=models.CharField(max_length=50)
+    # def save(self,*args,**kwargs):
+    #     self.slug=slugify(self.title)
+    #     super().save(args,kwargs)
 
 
 
