@@ -7,15 +7,15 @@ import ScrollReveal from 'scrollreveal';
 export default function Brand() {
 
   const brand = [
-    { img: "Hardware_Store_Logos-11.webp" },
+    { img: "marka.webp" },
     { img: "Hardware_Store_Logos-05.webp" },
-    { img: "Hardware_Store_Logos-11.webp" },
+    { img: "marka.webp" },
     { img: "Hardware_Store_Logos-05.webp" },
-    { img: "Hardware_Store_Logos-11.webp" },
-    { img: "Hardware_Store_Logos-11.webp" },
+    { img: "marka.webp" },
     { img: "Hardware_Store_Logos-05.webp" },
-    { img: "Hardware_Store_Logos-11.webp" },
-    { img: "Hardware_Store_Logos-11.webp" },
+    { img: "marka.webp" },
+    { img: "Hardware_Store_Logos-05.webp" },
+    { img: "marka.webp" },
     { img: "Hardware_Store_Logos-05.webp" },
 
   ]

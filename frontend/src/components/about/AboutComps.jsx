@@ -9,17 +9,17 @@ export default function AboutComps() {
     {
       id: "1",
       title: "İlişkiler",
-      textone: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer."
+      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
     },
     {
       id: "2",
       title: "Deneyim",
-      textone: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer."
+      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
     },
     {
       id: "3",
       title: "Sorumluluk",
-      textone: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer."
+      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
     }
   ]
 
@@ -28,8 +28,8 @@ export default function AboutComps() {
     {
       id: "1",
       title: "Masterson ve Barbaros İnşaat Ortakları",
-      textone: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer.",
-      texttwo: "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Burası, bir hikâye anlatmak için harika bir yer.",
+      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      texttwo: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
             
     } 
   ]
@@ -40,7 +40,7 @@ export default function AboutComps() {
 
       <div className='AboutComps'>
         <div className='AboutComps-img'>
-          <img className='ProjectProduct-img-imgs' src="c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp" alt="" />
+          <img className='ProjectProduct-img-imgs' src="hakkımdaimg.jpg" alt="" />
         </div>
         <div className='AboutComps-container' >
           <div className='AboutComps-container-right'>
@@ -53,7 +53,7 @@ export default function AboutComps() {
  
                  />
               ))
-            }
+            }               
 
           </div>
           <div className='AboutComps-container-left'>

@@ -16,12 +16,13 @@ export default function ProjectComps() {
   const { project, loading, error } = useSelector((state) => state.project) 
   const {category} = useSelector((state)=> state.category)
 
+  console.log(project, "prosjec");
 
   useEffect(() => {
     dispacth(getProject())
     dispacth(getCategory())
   }, [dispacth])
-
+      
   useEffect(() => {
     ScrollReveal().reveal('.ProjectComps-container-product', {
       interval: 500,
@@ -32,7 +33,6 @@ export default function ProjectComps() {
   }, []);
 
   console.log(error);
-
   //tıklanan kategori alıyor,  usestate at
   const handleSubmit = (item) => {
     setSelectedProject(item.name)
@@ -64,7 +64,7 @@ export default function ProjectComps() {
 
       {
         filterProduct.length == 0 ?
-          <div className='ProjectComps-productNull'> Bu Kategoride Projemiz Yok </div> :
+          <div className='ProjectComps-productNull'>Bu kategoride henüz projemiz yok, ancak gelecekte düşünüyoruz. </div> :
           <div className='ProjectComps-container'>
             {filterProduct.map((item, i) => (
               <div className='ProjectComps-container-product' key={i}>

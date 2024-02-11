@@ -1,20 +1,40 @@
 
-
+//homecaeer
 .HomeCareer{
     width: 90%;
     margin: auto;
-    
-
+    // background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     &-ServicesText{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: $text-gray;
+
+        @include mobil{
+            margin: 0;
+
+        }
     }
 }
 
-.HomeCareercomps{
+//home de karier'ları ortalıyor
+.career{
+    display: flex;
+    justify-content: center;
+}
+
+//Careercomps page
+.Careercomps{
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+
+    @include mobil{
+    justify-content: center;
+        
+    }
     
 }

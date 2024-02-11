@@ -9,9 +9,13 @@ const initialState = {
     error: null,
 };
 
+const res = await axios.get(`http://localhost:8000/iletisim`);
+
 //project getiriyor
 export const getProject = createAsyncThunk('getProject', async () => {
-    const res = await axios.get(`http://localhost:3001/project`);
+    // const res = await axios.get(`http://localhost:3001/project`);
+    const res = await axios.get(`http://localhost:8000/iletisim`);
+
     return res.data;
 });
 
@@ -29,7 +33,7 @@ const ProjectSlice = createSlice({
     extraReducers: (builder) => {
 
         builder.addCase(getProject.fulfilled, (state, action) => {
-            state.project = action.payload;
+            state.project = action.payload.cars;
             state.loading = false;
         });
 

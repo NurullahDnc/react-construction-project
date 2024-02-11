@@ -6,9 +6,10 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
 
   useEffect(()=>{
     ScrollReveal().reveal(".services-image", {
-      scale: 1.1
+      scale: 1.2,
+      duration: 1000
     })
-
+    
   },[])
 
   return (
@@ -21,8 +22,8 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
         <div className='services-text'>
             <Icon className="services-text-icon" size="50" />
             <h1>{title} </h1>
-            <p>{text1} </p>
-            <p>{text2} </p>
+            <p className='services-text-p' >{text1} </p>
+            <p className='services-text-p' >{text2} </p>
 
         </div>
 

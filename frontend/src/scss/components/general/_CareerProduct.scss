@@ -5,25 +5,47 @@
     height: 350px;
     padding: 20px;
     margin: 40px 13px;
-
+    
     border: 0.5px solid $bg-gray ;
+
+    @include mobil{
+        margin-left: 45px;
+    }
 
     &-title{
         height: 70px;
         overflow: hidden;
         font-size: 28px;
+        color: $text-black;
+    }
+
+    h1{
+        color: $main-orange;
+        font-size: 27px;
     }
 
     &-text{
         height: 160px;
         overflow: hidden;
         padding: 20px 0;
+        color: $text-gray;
 
     }
 
     &-Button{
         display: flex;
-        justify-content: center;        
+        justify-content: center;   
+        color: $black-color;     
+    }
+
+    body.dark-mode &{
+        &-text{
+      
+            color: $text-white;
+    
+        }
+
+
     }
 
 }

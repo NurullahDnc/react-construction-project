@@ -52,7 +52,7 @@ export default function ContactComps() {
   return (
     <div>
       <PageTitle title={"Bize Ulaşın"} />
-      <Heading title={"Teklif Talepleri ya da Sorular:"} p={"Lütfen formu doldurun ya da bizi arayın: (212) 234 56 78"} />
+      <Heading title={"Teklif Talepleri ya da Sorular:"} p={"Lütfen formu doldurun ya da bizi arayın: (212) 000 00 00"} />
 
       <div className='ContactComps'>
         <form className='ContactComps-form' onSubmit={handleClick} >

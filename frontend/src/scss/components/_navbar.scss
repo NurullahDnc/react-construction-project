@@ -12,13 +12,16 @@
     border-radius: 20px;
     z-index: 1000;
     position: absolute;
- 
+    
+    @include mobil{
+        position: fixed;
+    }
 
     &-menu{
-        color: red;
+        color: $main-orange;
  
         &-btn{
-            color: black;
+            color: $text-black;
 
         }
 

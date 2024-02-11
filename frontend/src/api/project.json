@@ -1,102 +1,89 @@
 {
   "project": [
     {
-      "id": "fasfsaf1",
-      "img": "c837a6_136f489b41d445c38ff79f772d719210~mv2.webp",
-      "title": "Villa Rezidanss ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Villa"
-    },
-    {
-      "title": "Kule Otobanı",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
-      "category": "Kule",
-      "id": "2asfagaf"
-    },
-    {
-      "title": "titledee",
-      "text": "textdee",
-      "img": "C:\\fakepath\\Ekran görüntüsü 2023-12-15 200417.png",
-      "category": "Sağlık Kuruluşu",
-      "id": "3sfasfasf"
-    },
-    {
-      "id": "43rw3rwf",
-      "img": "c837a6_7e9b1e4c7d834bde8aaefc3b04269ad4~mv2.webp",
-      "title": "Villa Gölü Köprüsü ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Villa"
-    },
-    {
-      "id": "523et5yher",
-      "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
-      "title": "Villa, Kemerburgaz ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Villa"
-    },
-    {
-      "id": "6243yrfew",
-      "img": "c837a6_7e9b1e4c7d834bde8aaefc3b04269ad4~mv2.webp",
-      "title": "Restorasyon Barbaros Evleri ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Restorasyon"
-    },
-    {
       "title": "Restorasyon ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "ticari.jpg",
       "category": "Restorasyon",
       "id": "7rwy6gt4rf"
     },
     {
-      "id": "1",
-      "img": "c837a6_136f489b41d445c38ff79f772d719210~mv2.webp",
-      "title": "Villa Rezidanss ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
+      "title": "İç Mekan Tasarım",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "icmekantasarım.jpg",
+      "category": "Restorasyon",
+      "id": "523et5yher"
+    },
+    {
+      "id": "43rw3rwf",
+      "img": "hd_duoemlak.webp",
+      "title": "Konutlar",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
       "category": "Villa"
+    },
+    {
+      "id": "2asfagaf",
+      "title": "Alt Yapı",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "altyapı.jpg",
+      "category": "Alt Yapı"
+    },
+    {
+      "id": "3sfasfasf",
+      "title": "Cevre Projesi",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "cevrealanı.avif",
+      "category": "Restorasyon"
+    },
+    {
+      "title": "Özel Projeler",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "iletisimimg.jpg",
+      "category": "Villa",
+      "id": "6243yrfew"
+    },
+    {
+      "id": "6adafs3yw",
+      "title": "Riva Evleris",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "konut.jpg",
+      "category": "Konut"
     },
     {
       "title": "Kule Otobanı",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
       "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
       "category": "Kule",
-      "id": "2"
+      "id": "fspo4d44d2"
     },
     {
-      "id": "5",
-      "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
-      "title": "Villa, Kemerburgaz ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
+      "title": "Tren İstasyonu ",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "img": "trenistasyon.webp",
+      "category": "Fabrika",
+      "id": "gdkld852455"
+    },
+    {
+      "title": "Alt Yapı İnşaatısss",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.",
+      "img": "altyapı.jpg",
+      "icon": "GiBulldozers",
+      "id": "6jdhg85454"
+    },
+    {
+      "id": "78745deffe",
+      "img": "apartman.avif",
+      "title": "Apartmanlar ",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
+      "category": "Konut"
+    },
+    {
+      "id": "fasfsaf1",
+      "img": "c837a6_136f489b41d445c38ff79f772d719210~mv2.webp",
+      "title": "Villa Rezidanss ",
+      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
       "category": "Villa"
-    },
-    {
-      "id": "6",
-      "img": "c837a6_7e9b1e4c7d834bde8aaefc3b04269ad4~mv2.webp",
-      "title": "Restorasyon Barbaros Evleri ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Restorasyon"
-    },
-    {
-      "id": "7",
-      "img": "c837a6_8abb4ef5216643d59e06aef027a9c7d1~mv2.webp",
-      "title": "Restorasyon ",
-      "text": "Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. İçeriğinizi eklemek ve yazı tipini değiştirmek için “Metni Düzenle”ye tıklayın veya buraya çift tıklayın. Bu alanı sayfanın istediğiniz bir yerine sürükleyip bırakabilirsiniz.",
-      "category": "Restorasyon"
-    },
-    {
-      "0": {
-        "id": "id",
-        "title": "title",
-        "text": "text",
-        "img": "img",
-        "category": ""
-      },
-      "id": "12441fc2-afbe-4335-b4c8-52978c85faca",
-      "title": "deneme",
-      "text": "text",
-      "img": "C:\\fakepath\\1Audi-etron-lansman-banner-anasayfa.png",
-      "category": "Kule"
     }
   ],
   "category": [
@@ -113,10 +100,6 @@
       "name": "Eğitim"
     },
     {
-      "id": "4",
-      "name": "Sağlık Kuruluşu"
-    },
-    {
       "id": "5",
       "name": "Restorasyon"
     },
@@ -126,7 +109,7 @@
     },
     {
       "id": "8",
-      "name": "Ögrenci Yurdu"
+      "name": "Fabrika"
     },
     {
       "id": "9",
@@ -138,7 +121,7 @@
     },
     {
       "id": "11",
-      "name": "Konferans Salonu"
+      "name": "Alt Yapı"
     }
   ],
   "message": [
@@ -158,5 +141,86 @@
       "title": "deneme",
       "text": "bundle.js:102333 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools\nbundle.js:121078 A non-serializable value was detected in an action, in the path: `payload.headers`. Value: AxiosHeaders {content-length: '649', content-type: 'application/json'} \nTake a look at the logic that dispatched this action:  {type: 'message/fulfilled', payload: {…}, meta: {…}} \n(See https://redux.js.org/faq/actions#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants) \n(To allow non-serializable values see: https://redux-toolkit.js.org/usage/usage-guide#working-with-non-serializable-data)\n(anonymous) @ bundle.js:121078\nmeasureTime @ bundle.js:120799\n(anonymous) @ bundle.js:121071\n(anonymous) @ bundle.js:285378\n(anonymous) @ bundle.js:120977\n(anonymous) @ bundle.js:120787\ndispatch @ bundle.js:285769\n(anonymous) @ bundle.js:121651\nawait in (anonymous) (async)\n(anonymous) @ bundle.js:121654\n(anonymous) @ bundle.js:285376\n(anonymous) @ bundle.js:120977\n(anonymous) @ bundle.js:120787\n(anonymous) @ bundle.js:2308\ncommitHookEffectListMount @ bundle.js:96639\ncommitPassiveMountOnFiber @ bundle.js:98132\ncommitPassiveMountEffects_complete @ bundle.js:98104\ncommitPassiveMountEffects_begin @ bundle.js:98094\ncommitPassiveMountEffects @ bundle.js:98084\nflushPassiveEffectsImpl @ bundle.js:99967\nflushPassiveEffects @ bundle.js:99920\nperformSyncWorkOnRoot @ bundle.js:99137\nflushSyncCallbacks @ bundle.js:87180\ncommitRootImpl @ bundle.js:99899\ncommitRoot @ bundle.js:99662\nfinishConcurrentRender @ bundle.js:99059\nperformConcurrentWorkOnRoot @ bundle.js:98910\nworkLoop @ bundle.js:112455\nflushWork @ bundle.js:112433\nperformWorkUntilDeadline @ bundle.js:112670"
     }
+  ],
+  "servicesProduct": [
+    {
+      "id": "1",
+      "img": "ticari.jpg",
+      "icon": "FaBuilding",
+      "title": "Ticari İnşaat",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate."
+    },
+    {
+      "id": "2",
+      "img": "konut.jpg",
+      "icon": "FaHome",
+      "title": "Konut İnşaatı",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate."
+    },
+    {
+      "id": "3",
+      "img": "plan.jpg",
+      "icon": "GiNotebook",
+      "title": "İnşaat Öncesi Planlama",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate."
+    },
+    {
+      "id": "4",
+      "img": "ozel.jpg",
+      "icon": "HiHomeModern",
+      "title": "Özel Projeler",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate."
+    },
+    {
+      "id": "5",
+      "img": "santiye.jpg",
+      "icon": "FaHardHat",
+      "title": "Şantiye Yönetimi",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate."
+    },
+    {
+      "title": "Alt Yapı İnşaatı",
+      "textone": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate lorem.",
+      "texttwo": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.",
+      "img": "altyapı.jpg",
+      "icon": "GiBulldozer",
+      "id": "6"
+    }
+  ],
+  "careerProduct": [
+    {
+      "title": "İnşaat Planlama Mühendisis",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia?",
+      "url": "/contact",
+      "buttonText": "Simdi Başvur",
+      "id": "5287413"
+    },
+    {
+      "title": "Resepsiyonist",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia?",
+      "url": "/contact",
+      "buttonText": "Simdi Başvur",
+      "id": "5287451"
+    },
+    {
+      "title": "İnşaat Mühendisi - Kıdemli",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia?",
+      "url": "/contact",
+      "buttonText": "Simdi Başvur",
+      "id": "56872"
+    },
+    {
+      "title": "Şantiye Şefi - Deneyimli",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia?",
+      "url": "/contact",
+      "buttonText": "Simdi Başvur",
+      "id": "527848"
+    }
+    
   ]
 }

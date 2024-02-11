@@ -17,6 +17,8 @@
         font-size: $smalFont;
         color: $bg-black;
         font-weight: 500;
+        color: $text-gray;
+
         @include mobil {
             font-size: 15px;
         }
@@ -26,7 +28,7 @@
         font-weight: bold ;
         font-size: 45px;
         color: $main-orange;
-        margin: 15px 0;
+        // margin: 15px 0;
 
         @include mobil {
            font-size: 27px;
@@ -40,9 +42,19 @@
         font-weight: 300;
         font-size: 18px;
         text-indent: 20px;
+        // color: $text-white;
 
         @include mobil {
             font-size: 15px;
          }
     }
+
+    body.dark-mode &{
+        
+        &-text{
+        color: $text-white;
+
+        }
+    }
+
 }
