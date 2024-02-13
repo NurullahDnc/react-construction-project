@@ -7,7 +7,7 @@
     &-left{
         width: 20%;
         height: 100vh;
-        background-color: $bg-gray;
+        background-color: #333333;
 
         @include mobil{
             min-width: 30%;
@@ -22,6 +22,7 @@
 
         @include mobil{
             width: 70%;
+            padding: 0;
         }
      }
 }

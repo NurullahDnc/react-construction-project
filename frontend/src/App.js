@@ -94,12 +94,12 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/detail/:id' element={<Detail />} />
           <Route path='/admin/*' element={<Admin />} />
-          <Route path='/admin/login' element={<Login />} />
+          <Route path='/admin' element={<Login />} />
           <Route path='/admin/register' element={<Register />} />
 
 
 
-          <Route path="*" element={<div>sayfa bulunmadı</div>} />
+          <Route path="*" element={<div className='pagenotFound'>sayfa bulunmadı</div>} />
         </Routes>
         <Footer />
 

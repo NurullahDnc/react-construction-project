@@ -9,7 +9,7 @@
     border: 0.5px solid $bg-gray ;
 
     @include mobil{
-        margin-left: 45px;
+        justify-content: center;
     }
 
     &-title{

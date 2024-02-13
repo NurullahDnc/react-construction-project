@@ -57,8 +57,9 @@ const ProjectsCreate = () => {
             await axios.put(`http://localhost:3001/project/${id}`, valueData);
             toast.success("Güncelleme başarılı");
             navigate("/admin/projects");
-            navigate(0)
-
+            setTimeout(() => {
+                navigate(0);
+              }, 750);
         } catch (error) {
             toast.error("Güncelleme sırasında hata oluştu", error);
          }

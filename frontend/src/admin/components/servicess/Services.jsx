@@ -21,6 +21,11 @@ const Services = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  const {user} = useSelector((state)=> state.auth)
+
+  if (!user) {
+    navigate("/")
+ }
  
   //input verisni tutuyor
   const [inputData, setInputData] = useState(
@@ -93,6 +98,9 @@ const Services = () => {
      const res = axios.delete(`http://localhost:3001/servicesProduct/${id}`)
       .then((res) => {
         toast.success("silme islemi basarılı")
+        setTimeout(() => {
+          navigate(0);
+        }, 750);
       })
       .catch((err) => {
         toast.error("silme isleminde hata olustu", err)
@@ -121,8 +129,9 @@ const Services = () => {
       .then(() => {
         toast.success("başsarılı sekilde eklendi")
         setIsOpen(!isOpen)
-        navigate(0)
-
+        setTimeout(() => {
+          navigate(0);
+        }, 750);
         setInputData({ title: "", text: "", img: "" })
 
       })
@@ -137,6 +146,7 @@ const Services = () => {
 
   return (
     <div style={{ height: 650, width: '100%' }}>
+      <h4>Hizmetler</h4>
       <DataGrid
         rows={rows}
         columns={columns}

@@ -1,75 +1,52 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Heading from '../general/Heading'
 import FooterItem from '../general/FooterItem'
 import PageTitle from '../general/PageTitle'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAbout } from '../../redux/AboutSlice'
+import ScrollReveal from 'scrollreveal';
 
 export default function AboutComps() {
 
-  const aboutData = [
-    {
-      id: "1",
-      title: "İlişkiler",
-      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
-    },
-    {
-      id: "2",
-      title: "Deneyim",
-      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
-    },
-    {
-      id: "3",
-      title: "Sorumluluk",
-      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      "
-    }
-  ]
-
+  const {about} = useSelector((state)=> state.about)
+  const dispacth = useDispatch()
   
-  const aboutDescription = [
-    {
-      id: "1",
-      title: "Masterson ve Barbaros İnşaat Ortakları",
-      textone: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
-      texttwo: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
-            
-    } 
-  ]
+  useEffect(()=>{
+    dispacth(getAbout())
+  },[dispacth])
+
+  ScrollReveal().reveal('.AboutComps-text-item',{
+    distance: "200px",
+    origin: "top",
+
+  });
+
+
   return (
     <div>
       <PageTitle title="Hakkımızda" />
-      <Heading title="Halk İçin İnşa Ediyoruz" />
+      <Heading title="Sizin İçin İnşa Ediyoruz" />
 
       <div className='AboutComps'>
         <div className='AboutComps-img'>
           <img className='ProjectProduct-img-imgs' src="hakkımdaimg.jpg" alt="" />
         </div>
-        <div className='AboutComps-container' >
-          <div className='AboutComps-container-right'>
-            {
-              aboutDescription.map(item =>(
-                <FooterItem
-                  title={item.title}
-                  textone={item.textone}
-                  texttwo={item.texttwo}
- 
-                 />
-              ))
-            }               
+        <div className='AboutComps-text' >
 
-          </div>
-          <div className='AboutComps-container-left'>
+         
 
            {
-              aboutData.map(item => (
-                <FooterItem
-                  key={item.id}
-                  title={item.title}
-                  textone={item.textone}
-                />
+              about.map(item => (
+                <div className='AboutComps-text-item'>
+                <h1>{item.title} </h1>
+                <p>{item.text} </p>
+
+              </div>
+
+          
               ))
             }
-
-
-          </div>
+         
         </div>
 
       </div>

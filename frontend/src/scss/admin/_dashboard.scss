@@ -1,0 +1,58 @@
+
+//admin dashboard comps
+.dashboard{
+    width: 100%;
+    height: auto;
+
+    @include mobil{
+        padding: 0;
+    }
+
+    h3{
+        padding-bottom: 20px;
+    }
+
+    &-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 30px; 
+        flex-wrap: wrap;
+
+        @include mobil{
+            gap: 0;
+        }
+    }
+}
+
+
+//admin dasboard cart, item 
+.DashboardCart{
+    width: 205px;
+    height: 170px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include mobil{
+        width: 45%;
+        height: 150px;
+        margin: 20px 5px;
+        padding: 0;
+    }
+
+    h4{
+        padding-top: 5px;
+        font-size: 27px;
+    }
+
+
+    span{
+        font-size: 50px;
+        margin-top: 10px;
+    }   
+}

@@ -20,7 +20,7 @@ export default function ServicesProduct({img, icon:Icon, title, text1, text2}) {
         </div>
 
         <div className='services-text'>
-            <Icon className="services-text-icon" size="50" />
+            {Icon && <Icon className="services-text-icon" size="40" /> }
             <h1>{title} </h1>
             <p className='services-text-p' >{text1} </p>
             <p className='services-text-p' >{text2} </p>

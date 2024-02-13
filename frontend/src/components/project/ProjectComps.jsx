@@ -47,7 +47,7 @@ export default function ProjectComps() {
     <div className='ProjectComps headline'>
       <PageTitle title="Projelerimiz" />
 
-      <Heading   title="Dayanıklı Projeler Üretiyoruz" />
+      <Heading   title="Modern Tasarımlar, Güvenilir Projeler" />
       <div className='ProjectComps-category' >
         {
           category.map((item, i) => (

@@ -11,14 +11,20 @@ import { login as loginHandle } from '../../redux/AuthSlice'
 
 const Login = () => {
 
-    // const { login } = useSelector((state) => state.auth)
-    // console.log(user, "userrrrrrlog");
+    const {user} = useSelector((state)=> state.auth)
+    const navigate = useNavigate()
+
+    if (user) {
+      navigate("/admin/dashboard/")
+   }
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate()
     const dispatch = useDispatch();
 
+ 
+    console.log(user,"ada");
+    
 
     const auth = getAuth();
 

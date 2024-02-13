@@ -6,7 +6,7 @@ import AdminProject from '../page/AdminProject';
 
 import Services from '../components/servicess/Services';
 import ProjectsCreate from '../components/project/ProjectsUpdate';
-import Dashboard from '../page/Dashboard';
+import AdminDashboard from '../page/AdminDashboard';
 import AdminAbout from '../page/AdminAbout';
 import Message from '../page/Message';
 import Register from '../auth/register';
@@ -25,7 +25,7 @@ const AdminRoutes = () => {
         </div>
         <div className='AdminRoutes-right' >
         <Routes>
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard" element={<AdminDashboard />} />
                 
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/Update/:id" element={<ServiceUpdate />} />
@@ -45,7 +45,7 @@ const AdminRoutes = () => {
                 <Route path="/user" element={<Register />} />
 
 
-                <Route path="*" element={<div>sayfa bulunamadı</div>} />
+                {/* <Route path="*" element={<div className='pagenotFound' >sayfa bulunamadı</div>} /> */}
 
 
             </Routes>

@@ -51,8 +51,8 @@ body.dark-mode .MuiTableBody-root .MTableBodyRow-root {
     color: $text-white; /* Metin rengi */
 }
 
-
-body.dark-mode input{
+body.dark-mode textarea,
+body.dark-mode input, textarea{
     color: black;
 }
 

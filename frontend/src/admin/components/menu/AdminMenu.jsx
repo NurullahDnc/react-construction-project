@@ -60,46 +60,43 @@ const AdminMenu = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const {user, logout} = useSelector((state)=> state.auth)
+    const { user, logout } = useSelector((state) => state.auth)
     // console.log(users, "as");
 
-  
+
     if (!user) {
         navigate("/")
     }
-    
+
     const auth = getAuth();
 
-    const handleLogout= async()=>{
+    const handleLogout = async () => {
         dispatch(logoutHandle())
         await signOut(auth).then(() => {
             toast.success("Çıkış işlemi başarıyla gerçekleşti");
-            navigate("/")
+            navigate("/admin/")
 
         }).catch((error) => {
-            toast.error("Çıkış yapma sırasında bir hata oluştu, tekrar deneyiniz");
+            toast.error("Çıkış yapma sırasında bir hata oluştu, tekrar deneyiniz", error);
         });
-          
+
     }
     return (
         <nav className='AdminMenu'>
 
             <ol className='AdminMenu-container'>
-                <h2>
-                    {/* Admin Panel */}
-
+                <div className='AdminMenu-container-user'>
                     {
-                        user ? <div>
+                        user ? <div className='AdminMenu-container-user-name'>
                             {
                                 user?.email
                             }
                         </div> : <p>Giris yapınız</p>
-
                     }
 
-                    <button onClick={handleLogout} style={{ margin: "0 5px", padding: "5px", border: "2px solid black" }}>Cıkış yap</button>
+                    <button className='AdminMenu-container-user-btn' onClick={handleLogout} >Cıkış yap</button>
 
-                </h2>
+                </div>
                 {
                     navLinks.map((item, i) => (
 

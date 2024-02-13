@@ -40,7 +40,7 @@ export default function ServicesComps() {
       <div className='servicesComps'>
       <PageTitle title="Hizmetlerimiz" />
 
-      <Heading  title="İhtiyaçlarınıza Yönelik Bir Dizi Hizmet Sunuyoruz" p="Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Kullanıcılara kendinizi tanıtın." />
+      <Heading  title="İhtiyaçlarınıza Yönelik Hizmet Sunuyoruz" p="Bu, bir paragraf. Kendi metninizi eklemek için tıklayın. Kullanıcılara kendinizi tanıtın." />
 
         {
           service.map((item, id)=>(

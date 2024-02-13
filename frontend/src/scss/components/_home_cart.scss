@@ -19,7 +19,7 @@
 
     &:hover {   
         transform: translateY(-30px);
-
+        
     }
 
     @include mobil {
@@ -48,7 +48,7 @@
         align-items: center;
 
         &-text {
-            color: $main-orange;
+            color: $text-white;
             font-size: $mediumFont;
             font-weight: 600;
             margin-bottom: 10px;

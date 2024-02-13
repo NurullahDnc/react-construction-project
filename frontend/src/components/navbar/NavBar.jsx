@@ -3,21 +3,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
 import { MdDarkMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleDarkMode } from '../../redux/DarkModeSlice';
 
 const NavBar = () => {
-  const [isDarkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!isDarkMode);
-  }
-
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // useEffect içinde body'ye sınıf ekleyip çıkarma işlemi
     document.body.classList.toggle('dark-mode', isDarkMode);
   }, [isDarkMode]);
 
+  const handleToggleDarkMode = () => {
+    dispatch(toggleDarkMode());
+  }
   return (
     <div className={`navbarGenral ${isDarkMode ? "dark-mode" : ""}`}>
       <div className='navbars container'>  
@@ -55,11 +55,8 @@ const NavBar = () => {
               <li className="navbars-right-item-items nav-item">
                 <NavLink className="nav-link" to="/contact">İletisim</NavLink>
               </li>
-              <li className="navbars-right-item-items nav-item">
-                <NavLink className="nav-link" to="/admin/login">Admin</NavLink>
-              </li>
               <li className={`  nav-item ${isDarkMode ? "dark-mode" : ""}`}>
-                <NavLink style={{color: "black"}} onClick={toggleDarkMode} className="nav-link">
+              <NavLink style={{ color: "black" }} onClick={handleToggleDarkMode} className="nav-link">
                   {
                     isDarkMode? <MdDarkMode size={28} />: <MdOutlineDarkMode size={28} />
                   }

@@ -24,6 +24,11 @@ const Career = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  const {user} = useSelector((state)=> state.auth)
+
+  if (!user) {
+    navigate("/")
+ }
   //input verisni tutuyor
   const [inputData, setInputData] = useState(
     {
@@ -94,8 +99,9 @@ const Career = () => {
       const res = axios.delete(`http://localhost:3001/careerProduct/${id}`)
       .then((res) => {
         toast.success("silme islemi basarılı")
-        navigate(0);
-      })
+     setTimeout(() => {
+            navigate(0);
+          }, 750);      })
       .catch((err) => {
         toast.error("silme isleminde hata olustu", err)
       })
@@ -123,8 +129,11 @@ const Career = () => {
       .then(() => {
         toast.success("başsarılı sekilde eklendi")
         setIsOpen(!isOpen)
-        navigate(0)
 
+        setTimeout(() => {
+          navigate(0);
+        }, 750);
+        
         setInputData({ title: "", text: "", buttonText: "", url: "", img: "" })
 
       })
@@ -138,7 +147,9 @@ const Career = () => {
 
 
   return (
-    <div style={{ height: 650, width: '100%' }}>
+    <div style={{ height: 600, width: '100%' }}>
+      <h4>Karier</h4>
+
       <DataGrid
         rows={rows}
         columns={columns}

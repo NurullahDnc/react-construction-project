@@ -2,17 +2,38 @@
 .AdminMenu{
     display: flex;
     align-items: center;
-
+    color: $text-white;
     &-container{
 
         width: 100%;
 
-        h2{
+        &-user{
+            height: 95px;
             text-align: center;
-            margin: 20px 0;
             font-size: 14px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid $text-black;
+
+            &-name{
+                height: 55%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+
+                @include mobil{
+                   font-size: 18px;
+                   overflow-y: auto;
+                   justify-content: start;
+                   align-items: start;
+                }
+            }
+
+            &-btn{
+                padding: 8px 17px;
+                border: 1px solid $text-gray;
+                border-radius: 7px;
+
+            }
 
             @include mobil{
                 font-size: 17px;
@@ -39,11 +60,13 @@
             :Link{
                 color: $main-orange;
                 padding-left: 10px;
+                text-decoration: none;
+
+             
 
                 @include mobil{
                     padding-left: 5px;
-                    
-                    
+                      
     
                 }
                 
