@@ -1,0 +1,14 @@
+Backend-Code/main_project/main_project/__pycache__/settings.cpython-39.pyc
+Backend-Code/main_project/main_project/__pycache__/urls.cpython-39.pyc
+Backend-Code/main_project/sayfalar/__pycache__/admin.cpython-39.pyc
+Backend-Code/main_project/sayfalar/__pycache__/models.cpython-39.pyc
+Backend-Code/main_project/sayfalar/__pycache__/serializers.cpython-39.pyc
+Backend-Code/main_project/sayfalar/__pycache__/urls.cpython-39.pyc
+Backend-Code/main_project/sayfalar/__pycache__/views.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0004_item_alter_cars_id_alter_cars_slug_and_more.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0005_cars_categori.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0006_remove_cars_categori.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0007_rename_kategoriler_categories_cars_home_categori.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0008_remove_cars_home_categori_alter_cars_slug_and_more.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0009_alter_categories_slug.cpython-39.pyc
+Backend-Code/main_project/sayfalar/migrations/__pycache__/0010_rename_home_categori_cars_category_and_more.cpython-39.pyc
