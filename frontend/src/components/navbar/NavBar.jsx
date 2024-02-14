@@ -18,14 +18,15 @@ const NavBar = () => {
   const handleToggleDarkMode = () => {
     dispatch(toggleDarkMode());
   }
+  
   return (
     <div className={`navbarGenral ${isDarkMode ? "dark-mode" : ""}`}>
-      <div className='navbars container'>  
+      <div className='navbars '>  
         <nav className="navbar navbar-expand-lg">  
           <div className='navbars-left'>
             <NavLink className="navbars-left-items navbar-brand" to="/">Logo</NavLink>
           </div>
-          <button 
+          <div 
             className="navbars-menu navbar-toggler" 
             type="button" 
             data-toggle="collapse" 
@@ -37,7 +38,7 @@ const NavBar = () => {
             <span className="navbars-menu-btn navbar-toggler-icon">
               <GiHamburgerMenu/>
             </span>
-          </button>
+          </div>
           <div className="navbars-right collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbars-right-item navbar-nav ml-auto">
               <li className="navbars-right-item-items nav-item">

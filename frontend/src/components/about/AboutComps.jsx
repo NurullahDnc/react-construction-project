@@ -18,6 +18,8 @@ export default function AboutComps() {
   ScrollReveal().reveal('.AboutComps-text-item',{
     distance: "200px",
     origin: "top",
+    duration: 2000,
+
 
   });
 

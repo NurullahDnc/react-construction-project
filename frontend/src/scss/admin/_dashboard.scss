@@ -16,7 +16,7 @@
         width: 100%;
         height: auto;
         display: flex;
-        gap: 30px; 
+        gap: 10px; 
         flex-wrap: wrap;
 
         @include mobil{
@@ -28,8 +28,8 @@
 
 //admin dasboard cart, item 
 .DashboardCart{
-    width: 205px;
-    height: 170px;
+    width: 276px;
+    height: 140px;
     border: 1px solid black;
     border-radius: 7px;
     padding: 20px;
@@ -37,12 +37,13 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(#fff, $main-orange);
 
     @include mobil{
         width: 45%;
         height: 150px;
-        margin: 20px 5px;
         padding: 0;
+        margin: 10px auto;
     }
 
     h4{
@@ -52,7 +53,6 @@
 
 
     span{
-        font-size: 50px;
-        margin-top: 10px;
+        font-size: 30px;
     }   
 }

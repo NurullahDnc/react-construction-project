@@ -7,18 +7,9 @@ import { getProject } from './redux/ProjectSlice';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import MainLayout from './components/layout/MainLayout';
-import AdminLayout from './components/layout/AdminLayout';
-import Home from './page/Home';
-import ServicesPage from './page/ServicesPage';
-import Project from './page/Project';
-import About from './page/About';
-import Career from './page/Career';
-import Contact from './page/Contact';
-import Detail from './page/Detail';
-import Admin from './admin/Admin';
+import MainLayout from './layout/MainLayout';
+import AdminLayout from './layout/AdminLayout';
 import Login from './admin/auth/Login';
-import Register from './admin/auth/register';
 import AdminRoutes from './admin/routes/AdminRoutes';
 
 function App() {
@@ -34,10 +25,12 @@ function App() {
     axios
       .get('http://localhost:8000/iletisim')
       .then((res) => {
-        setData(res.data.cars);
+        setData(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(data, "iletisim");
 
   return (
     <div className="App">

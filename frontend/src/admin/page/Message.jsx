@@ -95,6 +95,8 @@ export default function Message() {
   
   return (
     <div  >
+      <h4 className='pageTitle' >Mesajlar</h4>
+
       <DataGrid
         rows={rows}
         columns={columns}

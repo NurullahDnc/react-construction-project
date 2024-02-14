@@ -13,7 +13,7 @@ export default function ContactUs() {
         </div>
         <div className='ContactUs-text' >
             <div>
-                <Heading title="Şirketimiz Hakkında" p="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate." />
+                <Heading title="Şirketimiz Hakkında" p="  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit." />
             </div>
             <div className="ContactUs-icons" >
             <ContactUsCol icon={FaCity} number="2002" text="kuruluş yılı" />

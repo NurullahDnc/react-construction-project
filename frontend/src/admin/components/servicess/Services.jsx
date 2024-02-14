@@ -24,7 +24,7 @@ const Services = () => {
   const {user} = useSelector((state)=> state.auth)
 
   if (!user) {
-    navigate("/")
+    navigate("/admin/")
  }
  
   //input verisni tutuyor
@@ -146,7 +146,7 @@ const Services = () => {
 
   return (
     <div style={{ height: 650, width: '100%' }}>
-      <h4>Hizmetler</h4>
+      <h4 className='pageTitle'>Hizmetler</h4>
       <DataGrid
         rows={rows}
         columns={columns}

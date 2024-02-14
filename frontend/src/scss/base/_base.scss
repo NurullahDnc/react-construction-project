@@ -29,6 +29,8 @@ html {
     font-size: 16px;
     scrollbar-width: thin;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -96,8 +98,10 @@ a {
     cursor: pointer;
 
     &:hover {
-        color: $text-gray;
+        color: $main-orange;
         transition: 0.7s;
+        text-decoration: none;
+        
     }
 }
 

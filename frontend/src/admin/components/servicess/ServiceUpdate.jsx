@@ -25,7 +25,7 @@ const ServiceUpdate = () => {
     const {user} = useSelector((state)=> state.auth)
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     useEffect(() => {

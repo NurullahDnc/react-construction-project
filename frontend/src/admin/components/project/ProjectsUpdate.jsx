@@ -26,7 +26,7 @@ const ProjectsCreate = () => {
     const {user} = useSelector((state)=> state.auth)
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     useEffect(() => {
@@ -77,7 +77,7 @@ const ProjectsCreate = () => {
         <div className='adminPopup'>
             <form onSubmit={handleClick} className='adminPopup-container'>
                 <div className='inputGeneral'>
-                    <h4>Proje Güncelle</h4>
+                    <h4 className='pageTitle'>Proje Güncelle</h4>
                     <input
                         onChange={handleInputChange}
                         className='inputGeneral-input'

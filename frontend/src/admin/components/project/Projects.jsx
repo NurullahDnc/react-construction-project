@@ -27,7 +27,7 @@ export default function Projects() {
   const {user} = useSelector((state)=> state.auth)
 
   if (!user) {
-    navigate("/")
+    navigate("/admin/")
  }
  
 
@@ -152,8 +152,8 @@ export default function Projects() {
 
 
   return (
-    <div style={{ height: 600, width: '100%' }}>
-              <h4>Projeler</h4>
+    <div style={{ height: 580, width: '100%' }}>
+      <h4 className='pageTitle'>Projeler</h4>
 
       <DataGrid
         rows={rows}

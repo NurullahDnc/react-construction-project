@@ -8,18 +8,11 @@
       "id": "7rwy6gt4rf"
     },
     {
-      "title": "İç Mekan Tasarım",
+      "title": "Konutlar test123",
       "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
-      "img": "icmekantasarım.jpg",
-      "category": "Restorasyon",
-      "id": "523et5yher"
-    },
-    {
-      "id": "43rw3rwf",
       "img": "hd_duoemlak.webp",
-      "title": "Konutlar",
-      "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
-      "category": "Villa"
+      "category": "Fabrika",
+      "id": "43rw3rwf"
     },
     {
       "id": "2asfagaf",
@@ -82,6 +75,13 @@
       "title": "Villa Rezidanss ",
       "text": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam quod, numquam sapiente ducimus voluptate eaque aut consequatur ab odit, molestias quia? Aut voluptatum aperiam aliquam numquam reprehenderit libero cupiditate.      ",
       "category": "Villa"
+    },
+    {
+      "id": "8bc21c93-40e0-46e1-a5d6-90d22af3445e",
+      "title": "test123",
+      "text": "test12345",
+      "img": "C:\\fakepath\\iletisimimg.jpg",
+      "category": ""
     }
   ],
   "category": [
@@ -133,19 +133,19 @@
     },
     {
       "id": "658dbe46-e98d-4d15-8360-001a21269f21",
-      "name": "nuro",
+      "name": "erkut",
       "surname": "denme",
-      "mail": "nurullah.dinc.156@gmail.com",
+      "mail": "random123@gmail.com",
       "title": "deneme",
       "text": "bundle.js:102333 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools\nbundle.js:121078 A non-serializable value was detected in an action, in the path: `payload.headers`. Value: AxiosHeaders {content-length: '649', content-type: 'application/json'} \nTake a look at the logic that dispatched this action:  {type: 'message/fulfilled', payload: {…}, meta: {…}} \n(See https://redux.js.org/faq/actions#why-should-type-be-a-string-or-at-least-serializable-why-should-my-action-types-be-constants) \n(To allow non-serializable values see: https://redux-toolkit.js.org/usage/usage-guide#working-with-non-serializable-data)\n(anonymous) @ bundle.js:121078\nmeasureTime @ bundle.js:120799\n(anonymous) @ bundle.js:121071\n(anonymous) @ bundle.js:285378\n(anonymous) @ bundle.js:120977\n(anonymous) @ bundle.js:120787\ndispatch @ bundle.js:285769\n(anonymous) @ bundle.js:121651\nawait in (anonymous) (async)\n(anonymous) @ bundle.js:121654\n(anonymous) @ bundle.js:285376\n(anonymous) @ bundle.js:120977\n(anonymous) @ bundle.js:120787\n(anonymous) @ bundle.js:2308\ncommitHookEffectListMount @ bundle.js:96639\ncommitPassiveMountOnFiber @ bundle.js:98132\ncommitPassiveMountEffects_complete @ bundle.js:98104\ncommitPassiveMountEffects_begin @ bundle.js:98094\ncommitPassiveMountEffects @ bundle.js:98084\nflushPassiveEffectsImpl @ bundle.js:99967\nflushPassiveEffects @ bundle.js:99920\nperformSyncWorkOnRoot @ bundle.js:99137\nflushSyncCallbacks @ bundle.js:87180\ncommitRootImpl @ bundle.js:99899\ncommitRoot @ bundle.js:99662\nfinishConcurrentRender @ bundle.js:99059\nperformConcurrentWorkOnRoot @ bundle.js:98910\nworkLoop @ bundle.js:112455\nflushWork @ bundle.js:112433\nperformWorkUntilDeadline @ bundle.js:112670"
     },
     {
-      "id": "a78f342b-8985-44e3-885e-4fc1c661829e",
+      "id": "155042a5-2b8e-4ad3-b17d-8ac78587b79a",
       "name": "nurullah",
-      "surname": "dinç",
+      "surname": "dinc",
       "mail": "nurullah.dinc.156@gmail.com",
-      "title": "konu",
-      "text": "denme 1 2 3"
+      "title": "test123",
+      "text": "test12345"
     }
   ],
   "servicesProduct": [

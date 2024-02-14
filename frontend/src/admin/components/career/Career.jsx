@@ -27,7 +27,7 @@ const Career = () => {
   const {user} = useSelector((state)=> state.auth)
 
   if (!user) {
-    navigate("/")
+    navigate("/admin/")
  }
   //input verisni tutuyor
   const [inputData, setInputData] = useState(
@@ -148,7 +148,7 @@ const Career = () => {
 
   return (
     <div style={{ height: 600, width: '100%' }}>
-      <h4>Karier</h4>
+      <h4 className='pageTitle'>Karier</h4>
 
       <DataGrid
         rows={rows}

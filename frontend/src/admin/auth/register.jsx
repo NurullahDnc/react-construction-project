@@ -61,8 +61,8 @@ const Register = () => {
     return (
         <PageContainers>
             <div className='register'>
+                <h3 className='pageTitle' >Kulanıcı olsuturma</h3>
                 <div className='register-inputGeneral'>
-                    <h3 >Kulanıcı olsuturma</h3>
                     <input
                         className='inputGeneral-input'
                         placeholder='Kulanıcı adı'

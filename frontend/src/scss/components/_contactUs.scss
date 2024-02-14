@@ -3,14 +3,14 @@
 .ContactUs{
 
     width: 100%;
-    height: 100%;
+    height: 150%;
     color: $text-white;
     &-image{
         width: 100%;
         height: 100%;
         position: absolute;
 
-        filter: brightness(0.6);
+        filter: brightness(0.4);
 
         &-images{
             width: 100%;
@@ -40,7 +40,7 @@
         color: $text-white;
 
         @include mobil {
-        height: 58rem;
+        height: auto;
             
         }
  
@@ -49,8 +49,12 @@
 
     &-icons{
         display: flex;
+        margin-top: 70px;
 
         @include mobil {
+            margin-left: 20px;
+            margin-top: 0;
+
             display: block;
         }
     }

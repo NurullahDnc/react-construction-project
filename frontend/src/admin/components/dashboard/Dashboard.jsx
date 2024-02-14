@@ -15,7 +15,7 @@ const Dashboard = () => {
     const dispacth = useDispatch();
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     const {project} = useSelector((state) => state.project);
@@ -37,13 +37,13 @@ const Dashboard = () => {
     },[dispacth])
 
 
-    console.log(project);
+    // console.log(project);
 
 
 
     return (
         <div className='dashboard'>
-            <h3>Dashboard</h3>
+            <h3 className='pageTitle'>Dashboard</h3>
             <div className='dashboard-container'>
                 <DashboardCart title={"Projeler"} length={project.length} />
                 <DashboardCart title={"Kategori"} length={category.length} />
