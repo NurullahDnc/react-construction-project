@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Cars,categories
+from .models import project,categories
 
 
-@admin.register(Cars)
+@admin.register(project)
 class Home_Admin(admin.ModelAdmin):
     list_display = ("title", "isActive", "slug", "category")
     list_display_links = ("title", "slug",)
