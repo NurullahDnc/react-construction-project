@@ -8,7 +8,7 @@ class categories(models.Model):
     def __str__(self) -> str:
         return f"{self.name}".title()
 
-class Cars(models.Model):
+class project(models.Model):
     title=models.CharField(max_length=50)
     text=models.TextField()
     img=models.CharField(max_length=50,blank=False)
@@ -26,3 +26,21 @@ class Cars(models.Model):
 class Item(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+
+
+class servicesProduct(models.Model):
+   
+    img=models.CharField(max_length=50,blank=False)
+    icon=models.TextField()
+    title=models.TextField()
+    textone=models.TextField()
+    texttwo=models.TextField()
+
+
+class careerProduct(models.Model):
+    title=models.CharField(max_length=50)
+    text=models.TextField()
+    url=models.CharField(max_length=50,blank=False)
+    buttonText=models.DateField()
+   
+

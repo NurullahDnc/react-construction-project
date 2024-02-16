@@ -1,11 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
-from .models import Cars, Item
+from .models import project, Item
 from .serializers import ItemSerializer
 from rest_framework import generics
 
 def anasayfa(request):
-    kurslar = Cars.objects.filter(isActive=1).values('title')
+    kurslar = project.objects.filter(isActive=1).values('title')
     kategoriler = [{'title': kurs['title']} for kurs in kurslar]
     
     return render(request, 'pages/anasayfa.html', {
@@ -27,7 +27,7 @@ def hakkimizda(request):
     return render(request, "pages/hakkimizda.html")
 
 def details(request, slug):
-    detay = get_object_or_404(Cars, slug=slug)
+    detay = get_object_or_404(project, slug=slug)
     context = {
         'detay': detay
     }
