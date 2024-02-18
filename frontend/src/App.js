@@ -25,12 +25,13 @@ function App() {
     axios
       .get('http://localhost:8000/iletisim')
       .then((res) => {
-        setData(res.data);
+        // setData(res.data);
+        setData(res.data.cars)
       })
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(data, "iletisim");
+  console.log(data);
 
   return (
     <div className="App">
