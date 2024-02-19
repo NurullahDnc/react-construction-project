@@ -23,14 +23,15 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/iletisim')
+      .get('http://127.0.0.1:8000/categories')
       .then((res) => {
-        setData(res.data);
+        // setData(res.data);
+        setData(res.data.cars)
       })
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(data, "iletisim");
+  console.log(data, "backenddata");
 
   return (
     <div className="App">
