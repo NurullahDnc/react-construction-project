@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
 {% block title %} 
-<h3 style="margin-left: 100px;">Anasayfa</h3>
-
-
-
+<h3 style="margin-left: 150px;">Kategoriler</h3>
+{% for kategori in kategoriler %}
+    <a href="/project/kategori/{{ kategori.slug }}">{{ kategori.name }}</a>
+    <br>
+{% endfor %}
 {% endblock title %}
