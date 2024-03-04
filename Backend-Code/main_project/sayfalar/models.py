@@ -3,19 +3,19 @@ from django.utils.text import slugify
 
 class categories(models.Model):
     name=models.CharField(max_length=40)
-    slug=models.SlugField(default="",max_length=50,null=False,unique=True,db_index=True)
+    slug=models.SlugField(default="",null=False,unique=True,db_index=True,max_length=50)
 
     def __str__(self) -> str:
-        return f"{self.name}".title()
+        return f"{self.name}"
 
 class project(models.Model):
     title=models.CharField(max_length=50)
     text=models.TextField()
     img=models.CharField(max_length=50,blank=False)
-    date=models.DateField()
+    date=models.DateField(auto_now=True)
     isActive=models.BooleanField()
     slug=models.SlugField(default="",null=False,unique=True,db_index=True,blank=True)
-    category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="kurslar")
+    category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="evler")
 
     # def save(self,*args,**kwargs):
     #     self.slug=slugify(self.title)
