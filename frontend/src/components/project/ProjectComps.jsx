@@ -41,7 +41,7 @@ export default function ProjectComps() {
   }
 
   // projeleri kategoriye gore filter yap degiskene at, selectedProject Tümü esit ise productdata don degil ise filter yap
-  const filterProduct = selectedProject === "Tümü" ? project : project.filter(item => item.category === selectedProject)
+  const filterProduct = selectedProject === "Tümü" ? project : project.filter(item => item.category === selectedProject) 
 
   return (
     <div className='ProjectComps headline'>
