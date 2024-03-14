@@ -82,7 +82,7 @@ const Services = () => {
 
   const rows = service.map(item => (
     {
-      id: item.id,
+      id: uuidv4(), 
       img: item.img,
       icon: item.icon,
       title: item.title,
