@@ -31,8 +31,8 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(data, "backenddata");
-
+   console.log(data, "backenddata" );
+ 
   return (
     <div className="App">
       <ToastContainer position="top-center" reverseOrder={false} />

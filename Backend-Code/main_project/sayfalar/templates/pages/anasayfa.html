@@ -1,6 +1,6 @@
-{% extends "layout.html" %}
 {% block title %} 
 <h3 style="margin-left: 150px;">Anasayfa</h3>
+<<<<<<< HEAD
     {% for kategoriler_ in kategoiler %}
 <!-- 
 
@@ -11,4 +11,11 @@
 
 
 
+=======
+{% for project_ in project %}
+    <a href="/project/{{project_.slug}}">{{project_.title}}</a>
+    <br>
+{% endfor %}
+>>>>>>> 2fb21b6e57745a81e3b028eb5341fbbb4b6c71bd
 {% endblock title %}
+{% include "pages/categories.html" %}
