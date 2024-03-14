@@ -63,7 +63,6 @@ const AdminMenu = () => {
     const navigate = useNavigate();
     const [openMenu, setOpenMenu] = useState(false)
     const { user, logout } = useSelector((state) => state.auth)
-    // console.log(users, "as");
 
 
     if (!user) {
@@ -88,7 +87,6 @@ const AdminMenu = () => {
         setOpenMenu(!openMenu);
     }
 
-    console.log(openMenu);
 
     return (
         <nav className={`AdminMenu ${openMenu? AdminMenu: ""} `} >

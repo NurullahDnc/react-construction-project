@@ -21,17 +21,17 @@ function App() {
     dispatch(getProject());
   }, [dispatch]);
 
-  useEffect(() => {
-    axios
-      .get('http://127.0.0.1:8000/categories')
-      .then((res) => {
-        // setData(res.data);
-        setData(res.data.cars)
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get('http://127.0.0.1:8000/categories')
+  //     .then((res) => {
+  //       // setData(res.data);
+  //       setData(res.data.cars)
+  //     })
+  //     // .catch((err) => console.log(err));
+  // }, []);
 
-   console.log(data, "backenddata" );
+  //  console.log(data, "backenddata" );
  
   return (
     <div className="App">

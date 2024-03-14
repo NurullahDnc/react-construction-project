@@ -22,7 +22,6 @@ export default function Projects() {
   const dispacth = useDispatch();
 
   // const {user} = useSelector((state)=> state.auth)
-  // console.log(user,"xx");
 
   const {user} = useSelector((state)=> state.auth)
 
@@ -97,7 +96,6 @@ export default function Projects() {
 
   //delete
   const handleDelete = async (params) => {
-    console.log(params.id);
     const id = params.id
     axios.delete(`http://localhost:3001/project/${id}`)
       .then(() => {
@@ -144,7 +142,6 @@ export default function Projects() {
       })
       .catch((err) => {
         toast.error("Bir hata olsutu", err.status)
-        console.log(err);
       })
 
 
