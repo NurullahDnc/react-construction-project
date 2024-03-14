@@ -1,44 +1,33 @@
-
-
 // ProjectSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { collection, getDocs } from 'firebase/firestore'; 
+import { db } from '../config/FirebaseConfig'; 
 
-const initialState = {
-    service: [],
-   
-};
-
-//project getiriyor
+// Firebase üzerinden veri getiren asenkron eylem
 export const getService = createAsyncThunk('getService', async () => {
-    const res = await axios.get(`http://localhost:3001/servicesProduct`);
-    return res.data;
+    try {
+        const querySnapshot = await getDocs(collection(db, 'servicesProduct'));
+        return querySnapshot.docs.map(doc => doc.data()); 
+    } catch (error) {
+        throw error; 
+    }
 });
-
-
-
-
+ 
 const ServiceSlice = createSlice({
     name: 'service',
-    initialState,
+    initialState: {
+        service: [],
+        error: null,
+    },
     reducers: {},
     extraReducers: (builder) => {
-
-        builder.addCase(getService.fulfilled, (state, action) => {
-            state.service = action.payload;
-         });
-
-        builder.addCase(getService.rejected, (state, action) => {
-
-            if (action.payload) {
-                state.error = action.payload
-            } else {
-                state.error = action.error.stack
-            }
-        });
-
-        
-
+        builder
+            .addCase(getService.fulfilled, (state, action) => {
+                state.service = action.payload; // Başarılı bir şekilde alınan verileri store'a kaydedin
+             })
+            .addCase(getService.rejected, (state, action) => {
+                state.error = action.error.message; // Hata durumunda hatayı store'a kaydedin
+            });
     },
 });
 

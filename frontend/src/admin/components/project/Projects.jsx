@@ -86,7 +86,7 @@ export default function Projects() {
   //reduxtan gelen veri uzerinde map don ekrana bastır
   const rows = project.map((item) => (
     {
-      id: item.id,
+      id: uuidv4(), 
       title: item.title,
       text: item.text,
       img: item.img,
