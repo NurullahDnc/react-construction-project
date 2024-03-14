@@ -37,9 +37,6 @@ const Dashboard = () => {
     },[dispacth])
 
 
-    // console.log(project);
-
-
 
     return (
         <div className='dashboard'>

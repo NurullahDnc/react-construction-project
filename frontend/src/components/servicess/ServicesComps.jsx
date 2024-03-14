@@ -29,7 +29,6 @@ export default function ServicesComps() {
   const dispacth = useDispatch();
   const {service} = useSelector((state)=> state.service)
 
-  console.log("service", service);
 
   useEffect(()=>{
     dispacth(getService())

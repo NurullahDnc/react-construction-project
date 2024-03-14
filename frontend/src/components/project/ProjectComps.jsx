@@ -16,7 +16,6 @@ export default function ProjectComps() {
   const { project, loading, error } = useSelector((state) => state.project) 
   const {category} = useSelector((state)=> state.category)
 
-  console.log(project, "prosjec");
 
   useEffect(() => {
     dispacth(getProject())
@@ -32,11 +31,9 @@ export default function ProjectComps() {
     });
   }, []);
 
-  console.log(error);
   //tıklanan kategori alıyor,  usestate at
   const handleSubmit = (item) => {
     setSelectedProject(item.name)
-    console.log("Seçili Proje:", selectedProject);
 
   }
 

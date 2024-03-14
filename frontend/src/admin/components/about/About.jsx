@@ -90,7 +90,6 @@ const Services = () => {
 
 
   const handleDelete = async (params) => {
-    // console.log(params.id);
     const id = params.id
      const res = axios.delete(`http://localhost:3001/aboutData/${id}`)
       .then((res) => {
@@ -138,7 +137,6 @@ const Services = () => {
       })
       .catch((err) => {
         toast.error("Bir hata olsutu", err.status)
-        console.log(err);
       })
 
 

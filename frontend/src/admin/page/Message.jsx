@@ -79,7 +79,6 @@ export default function Message() {
 
   //delete
   const handleDelete = async (params) => {
-    console.log(params.id);
     const id = params.id
     axios.delete(`http://localhost:3001/message/${id}`)
       .then(() => {
