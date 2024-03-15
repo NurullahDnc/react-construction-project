@@ -4,5 +4,9 @@
     <a href="/project/{{project_.slug}}">{{project_.title}}</a>
     <br>
 {% endfor %}
+<form action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="anahtar Kelime">
+    <button type="submit">button</button>
+</form>
 {% endblock title %}
 {% include "pages/categories.html" %}
