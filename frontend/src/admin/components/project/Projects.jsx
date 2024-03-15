@@ -22,7 +22,6 @@ export default function Projects() {
   const dispacth = useDispatch();
 
   // const {user} = useSelector((state)=> state.auth)
-  // console.log(user,"xx");
 
   const {user} = useSelector((state)=> state.auth)
 
@@ -86,7 +85,7 @@ export default function Projects() {
   //reduxtan gelen veri uzerinde map don ekrana bastır
   const rows = project.map((item) => (
     {
-      id: item.id,
+      id: uuidv4(), 
       title: item.title,
       text: item.text,
       img: item.img,
@@ -97,7 +96,6 @@ export default function Projects() {
 
   //delete
   const handleDelete = async (params) => {
-    console.log(params.id);
     const id = params.id
     axios.delete(`http://localhost:3001/project/${id}`)
       .then(() => {
@@ -144,7 +142,6 @@ export default function Projects() {
       })
       .catch((err) => {
         toast.error("Bir hata olsutu", err.status)
-        console.log(err);
       })
 
 

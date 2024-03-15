@@ -23,7 +23,6 @@ const Login = () => {
     const dispatch = useDispatch();
 
  
-    console.log(user,"ada");
     
 
     const auth = getAuth();
@@ -58,7 +57,6 @@ const Login = () => {
                         
                     default:
                         toast.error("giriş sırasında bir hata olsutu. Lütfen tekrar deneyiniz.")
-                        console.log(errorCode);
                         break;
                 }
 

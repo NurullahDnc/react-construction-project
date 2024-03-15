@@ -16,7 +16,6 @@ export default function CareerComps() {
   useEffect(() => {
     dispacth(getCareer())
   }, [dispacth])
-  console.log(career);
 
   return (
     <div >

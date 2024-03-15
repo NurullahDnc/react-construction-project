@@ -31,7 +31,6 @@ const CareerUpdate = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(`http://localhost:3001/careerProduct/${id}`)
-                console.log(res);
                    const{title, text, url, buttonText} = res.data
                   setValueData({title, text, url, buttonText})
 

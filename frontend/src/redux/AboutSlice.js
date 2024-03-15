@@ -1,45 +1,34 @@
-
-
 // ProjectSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { collection, getDocs } from 'firebase/firestore'; 
+import { db } from '../config/FirebaseConfig'; 
 
-const initialState = {
-    about: [],
-   
-};
-
-//project getiriyor
+// Firebase üzerinden veri getiren asenkron eylem
 export const getAbout = createAsyncThunk('getAbout', async () => {
-    const res = await axios.get(`http://localhost:3001/aboutData`);
-    return res.data;
+    try {
+        const querySnapshot = await getDocs(collection(db, 'aboutData'));
+        return querySnapshot.docs.map(doc => doc.data()); 
+    } catch (error) {
+        throw error; 
+    }
 });
-
-
-
-
-const AboutSlice = createSlice({
+ 
+const aboutSlice = createSlice({
     name: 'about',
-    initialState,
+    initialState: {
+        about: [],
+        error: null,
+    },
     reducers: {},
     extraReducers: (builder) => {
-
-        builder.addCase(getAbout.fulfilled, (state, action) => {
-            state.about = action.payload;
-         });
-
-        builder.addCase(getAbout.rejected, (state, action) => {
-
-            if (action.payload) {
-                state.error = action.payload
-            } else {
-                state.error = action.error.stack
-            }
-        });
-
-        
-
+        builder
+            .addCase(getAbout.fulfilled, (state, action) => {
+                state.about = action.payload; // Başarılı bir şekilde alınan verileri store'a kaydedin
+            })
+            .addCase(getAbout.rejected, (state, action) => {
+                state.error = action.error.message; // Hata durumunda hatayı store'a kaydedin
+            });
     },
 });
 
-export default AboutSlice.reducer;
+export default aboutSlice.reducer;
