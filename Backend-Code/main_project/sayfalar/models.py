@@ -13,7 +13,7 @@ class project(models.Model):
     text=models.TextField()
     img=models.CharField(max_length=50,blank=False)
     date=models.DateField(auto_now=True)
-    isActive=models.BooleanField()
+    isActive=models.BooleanField(default=False)
     slug=models.SlugField(default="",null=False,unique=True,db_index=True,blank=True)
     category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="evler")
 

@@ -16,6 +16,13 @@
     <a href="/project/{{project_.slug}}">{{project_.title}}</a>
     <br>
 {% endfor %}
+<<<<<<< HEAD
 >>>>>>> 2fb21b6e57745a81e3b028eb5341fbbb4b6c71bd
+=======
+<form action="{% url 'search' %}">
+    <input type="text" name="q" placeholder="anahtar Kelime">
+    <button type="submit">button</button>
+</form>
+>>>>>>> master
 {% endblock title %}
 {% include "pages/categories.html" %}
