@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>Projeler</h1>
+      <h1>Açıklamar</h1>
+      <h1>Slug Bilgileri</h1>
+      <table>
+        <tr>
+            <thead>
+                <th>Proje</th>
+                <th>Açıklama</th>
+                <th>Resim</th>
+                <th>Slug</th>
+            </thead>
+        </tr>
+        {% for projectOne in project %}
+        <tr>
+            <td>
+                {{projectOne.title}}
+            </td>
+            <td>
+                {{projectOne.text}}
+            </td>
+            <td>
+                {{projectOne.img}}
+            </td>
+            <td>
+                {{projectOne.slug}}
+            </td>
+            <td>
+                <a href="{% url "projectUpdate" projectOne.id %}">✏️Düzenle</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+       
+        
+    
+</body>
+</html>

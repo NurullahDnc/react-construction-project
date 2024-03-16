@@ -1,8 +1,8 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
-from .forms import HomeAddCreate
-from .models import categories, project, Item,categories
+from .forms import HomeAddCreate, HomeUpdate
+from .models import categories, project,categories
 from .serializers import ItemSerializer
 from rest_framework import generics
 from . import models
@@ -66,18 +66,20 @@ def homeadd(request):
             form=HomeAddCreate()#Eğer veriler gelmyorsa yeni bir form uygulaması göndermek için kullanılır
         return render(request,"pages/homeAdd.html",{"form":form})
 
-    # if request.method == "POST":
-    #     title = request.POST["title"]
-    #     text = request.POST["text"]
-    #     slug = request.POST["slug"]
-    #     isActive = request.POST.get("isActive", False)  # Parantez kullanılmalıdır
-    #     if isActive == "on":
-    #         isActive = True  # Doğru atama operatörü kullanılmalıdır
-    #     ekle = project(title=title, text=text, slug=slug, isActive=isActive)
-    #     ekle.save()
-    #     return redirect("/anasayfa")
-    # return render(request, "pages/homeAdd.html")
+def homeList(request):
+    project_=project.objects.all()
+    return render(request,"pages/projectList.html",{
+        "project":project_
+    })
 
-def HomeCreate(request):
-    form=HomeAddCreate()
-    return render(request,"courses/create-course.html",{"form":form})
+def projectUpdate(request, id):
+    projectValue = get_object_or_404(project, pk=id)
+    if request.method == "POST":
+        form = HomeUpdate(request.POST, instance=projectValue)
+        if form.is_valid():
+            form.save()
+            return redirect("/course_list")  # Doğru URL'yi belirtin
+    else:
+        form = HomeUpdate(instance=projectValue)
+
+    return render(request, "pages/projectUpdate.html", {"form": form })

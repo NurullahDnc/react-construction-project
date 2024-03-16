@@ -14,4 +14,6 @@ urlpatterns = [
     path('project/kategori/<slug>', views.getCourse),
     path('anasayfa', views.anasayfa, name='mymodel-list'),
     path('kursekle',views.homeadd, name="home_ekle"),
+    path("liste",views.homeList,name="courseList"),
+    path("HomeUpdate/<int:id>",views.projectUpdate,name="projectUpdate")
 ]
