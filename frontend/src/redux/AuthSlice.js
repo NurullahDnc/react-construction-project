@@ -9,7 +9,7 @@ const initialState = {
 
 const AuthSlice = createSlice({
     name: 'auth',
-    initialState,
+    initialState,   
     reducers: {
         //login parametre alacak, kulanıcııyı localstore kayıt et, 
         login: (state, action) =>{

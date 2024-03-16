@@ -7,12 +7,10 @@ const Popup = () => {
 
     const handleAccepts =()=>{
         setIsOpen(!isOpen);
-        console.log("Kabul edildi");
     }
 
     const handleReject =()=>{
         setIsOpen(!isOpen);
-        console.log("kabul edilmedi");
 
     }
 

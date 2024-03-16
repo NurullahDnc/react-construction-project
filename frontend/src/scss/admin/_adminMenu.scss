@@ -1,18 +1,125 @@
 
-.AdminMenu{
-    display: flex;
-    align-items: center;
 
-    &-container{
+.toggleMenu{
+
+    position: absolute;
+    left: -270px;
+
+}
+
+
+
+.AdminMenu{
+    background-color: #202529;
+    width: 270px;
+    height: 100vh;
+    color: $text-white;
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+ 
+    &-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+
+        @include mobil{
+            font-size: 18px;
+        }
+
+        &-hamburgerMenu{
+            position: relative;
+            color: $bg-black;
+            left: 90px;
+            cursor: pointer;
+        }
+    }
+
+    &-item{
+        width: 100%;
+        font-size: 23px;
+        margin-left: 15px;
+        line-height: 50px;
+
+        @include mobil{
+            font-size: 17px;
+        }
+    
+    }
+
+
+    &-hr{
+        background-color: $text-gray;
+        padding: 1px 0;
+     }
+
+
+     &-user{
+        
+        font-size: 14px;
+        font-weight: 100;
+
+        &-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &-btn{
+                width: 100px;
+                padding: 6px 0;
+                margin: 6px 0;
+                border-radius: 6px;
+                background-color: $main-orange;
+            }
+        }
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+&-container{
 
         width: 100%;
 
-        h2{
+        &-user{
+            height: 95px;
             text-align: center;
-            margin: 20px 0;
             font-size: 14px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid black;
+            border-bottom: 2px solid $text-black;
+
+            &-name{
+                height: 55%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+
+                @include mobil{
+                   font-size: 18px;
+                   overflow-y: auto;
+                   justify-content: start;
+                   align-items: start;
+                }
+            }
+
+            &-btn{
+                padding: 8px 17px;
+                border: 1px solid $text-gray;
+                border-radius: 7px;
+
+            }
 
             @include mobil{
                 font-size: 17px;
@@ -39,15 +146,16 @@
             :Link{
                 color: $main-orange;
                 padding-left: 10px;
+                text-decoration: none;
+
+             
 
                 @include mobil{
                     padding-left: 5px;
-                    
-                    
+                      
     
                 }
                 
             }
         }
-    }
-}
+*/

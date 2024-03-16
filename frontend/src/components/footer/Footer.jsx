@@ -31,10 +31,10 @@ export default function Footer() {
   return (
     <div className='Footer'>
       <div className='Footer-left'>
-        <h1>Trendyol</h1>
+        <h1>Logo</h1>
         <div className='Footer-left-text'>
-          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quaerat similique officiis neque provident vitae error harum? Sapiente, at libero. Quam quis nesciunt odit eligendi nulla facere doloremque veritatis totam?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque esse cum nam voluptate perferendis aspernatur tempore? Consequuntur a veritatis alias voluptatibus nihil error, officia cumque suscipit eum voluptate voluptatum hic.
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quaerat similique officiis neque provident vitae error harum? Sapiente, at libero. 
+          
           </span>
 
         </div>
@@ -47,7 +47,7 @@ export default function Footer() {
 
 
           </ul>
-          <p>Tescilli Markasıdır. © 2017 - 2024 Tüm Hakları Saklıdır. KVKK | Yasal  </p>
+          <p>&copy; 2024  Web Sitem - Nurullah Dinc</p>        
         </div>
 
       </div>

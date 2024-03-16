@@ -3,72 +3,64 @@ import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
-import AdminPopup from '../general/AdminPopup';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getService } from '../../../redux/ServiceSlice';
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { RxUpdate } from "react-icons/rx";
 import { useNavigate } from 'react-router';
 import { v4 as uuidv4 } from 'uuid';
 import AdminButton from '../general/AdminButton';
 import { getCareer } from '../../../redux/CareerSlice';
-
+import { collection, addDoc, deleteDoc, doc, getDocs } from 'firebase/firestore';  
+import { db } from '../../../config/FirebaseConfig';  
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { RxUpdate } from "react-icons/rx";
+import { useEffect } from 'react';
 
 const Career = () => {
-
-  const dispacth = useDispatch();
-  const { service } = useSelector((state) => state.service)
-  const { career } = useSelector((state) => state.career)
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useSelector((state)=> state.auth);
+  const { career } = useSelector((state) => state.career);
 
-  //input verisni tutuyor
-  const [inputData, setInputData] = useState(
-    {
-      id: "",
-      title: "",
-      text: "",
-      url: "",
-      buttonText: "",
-     }
-  );
+  if (!user) {
+    navigate("/admin/");
+  }
+
+  const [inputData, setInputData] = useState({
+    id: "",
+    title: "",
+    text: "",
+    url: "",
+    buttonText: "",
+  });
 
   useEffect(() => {
-    dispacth(getService())
-    dispacth(getCareer())
-
-  }, [dispacth])
+    dispatch(getCareer());
+  }, [dispatch]);
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'title', headerName: 'title', width: 200 },
-    { field: 'text', headerName: 'text', width: 210 },
-    { field: 'url', headerName: 'url', width: 210 },
-    { field: 'buttonText', headerName: 'buttonText', width: 130 },
- 
+    { field: 'title', headerName: 'Title', width: 200 },
+    { field: 'text', headerName: 'Text', width: 210 },
+    { field: 'url', headerName: 'URL', width: 210 },
+    { field: 'buttonText', headerName: 'Button Text', width: 130 },
     {
       field: "delete",
-      headerName: "delete",
+      headerName: "Delete",
       width: 100,
       renderCell: (params) => {
         return (
-          //ürünün id ve resmi paramete olarak gonderiyoruz iki taraftan silmesi icin
           <button onClick={() => handleDelete(params)} className="mx-4 text-red-500 cursor-pointer ">
             <RiDeleteBin6Line size={25} />
           </button>
         )
       }
     },
-
     {
       field: "update",
-      headerName: "update",
+      headerName: "Update",
       width: 100,
       renderCell: (params) => {
         return (
-          //ürünün id ve resmi paramete olarak gonderiyoruz iki taraftan silmesi icin
           <button onClick={() => navigate(`/admin/career/Update/${params.id}`)} className="mx-4 text-red-500 cursor-pointer ">
             <RxUpdate size={25} />
           </button>
@@ -77,158 +69,128 @@ const Career = () => {
     },
   ];
 
-  const rows = career.map(item => (
-    {
-      id: item.id,
-      title: item.title,
-      text: item.text,
-      url: item.url,
-      buttonText: item.buttonText,
-     }
-  ))
-
+  const rows = career.map(item => ({
+    id: item.id,
+    title: item.title,
+    text: item.text,
+    url: item.url,
+    buttonText: item.buttonText,
+  }));
 
   const handleDelete = async (params) => {
-    // console.log(params.id);
-    const id = params.id
-      const res = axios.delete(`http://localhost:3001/careerProduct/${id}`)
-      .then((res) => {
-        toast.success("silme islemi basarılı")
+    const id = params.id;
+    try {
+      await deleteDoc(doc(db, 'careerProduct', id)); 
+      toast.success("Silme işlemi başarılı");
+      setTimeout(() => {
         navigate(0);
-      })
-      .catch((err) => {
-        toast.error("silme isleminde hata olustu", err)
-      })
+      }, 750);
+    } catch (error) {
+      toast.error("Silme işleminde hata oluştu", error);
+    }
   }
 
-  //proje olsuturma popup kapat aç
   const handleOpenClose = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
   }
 
-  //inputtan veri alma
   const handleInputChange = (e) => {
     setInputData((prevData) => ({
       ...prevData,
-      [e.target.name]: e.target.value, id: uuidv4()
+      [e.target.name]: e.target.value,
+      id: uuidv4()
     }));
   };
 
-
-  //proje olustur
   const handleClick = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:3001/careerProduct/", inputData)
-      .then(() => {
-        toast.success("başsarılı sekilde eklendi")
-        setIsOpen(!isOpen)
-        navigate(0)
-
-        setInputData({ title: "", text: "", buttonText: "", url: "", img: "" })
-
-      })
-      .catch((err) => {
-        toast.error("Bir hata olsutu", err.status)
-        console.log(err);
-      })
-
-
+    try {
+      await addDoc(collection(db, 'careerProduct'), inputData);
+      dispatch(getCareer());
+      setIsOpen(false);
+      setInputData({
+        title: "",
+        text: "",
+        buttonText: "",
+        url: ""
+      });
+      navigate(0);
+      toast.success("Başarılı bir şekilde eklendi");
+    } catch (error) {
+      toast.error("Veri eklenirken bir hata oluştu", error);
+    }
   }
 
-
   return (
-    <div style={{ height: 650, width: '100%' }}>
+    <div style={{ height: 600, width: '100%' }}>
+      <h4 className='pageTitle'>Karier</h4>
+
       <DataGrid
         rows={rows}
         columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 10 },
-          },
-        }}
         pageSizeOptions={[5, 10]}
         checkboxSelection
       />
 
-      {
-        isOpen ? (
-          <div className='adminPopup'  >
-            <form onSubmit={handleClick} className='adminPopup-container' >
-
-              <div className='inputGeneral'>
-                <h4 >karier olştur</h4>
-                <input
-                  onChange={handleInputChange}
-                  className='inputGeneral-input'
-                  placeholder='karier Başlıgı'
-                  name='title'
-                  value={inputData.title}
-                  type="text"
-                />
-
-                <textarea
-                  onChange={handleInputChange}
-                  className='inputGeneral-input'
-                  placeholder=' Metini'
-                  name='text'
-                  value={inputData.text}
-                  type="text"
-
-                ></textarea>
-
-
-                <textarea
-                  onChange={handleInputChange}
-                  className='inputGeneral-input'
-                  placeholder=' karier url'
-                  name='url'
-                  value={inputData.url}
-                  type="text"
-
-                ></textarea>
-
-                <input
-                  onChange={handleInputChange}
-                  className='inputGeneral-input'
-                  placeholder='karier button text'
-                  name='buttonText'
-                  value={inputData.buttonText}
-              
-                  type="text"
-                />
-
+      {isOpen ? (
+        <div className='adminPopup'>
+          <form onSubmit={handleClick} className='adminPopup-container'>
+            <div className='inputGeneral'>
+              <h4>Karier Oluştur</h4>
               <input
-                  onChange={handleInputChange}
-                  className='inputGeneral-input'
-                  name='img'
-                  value={inputData.img}
-                  type="file"
-                  disabled
-                  required
+                onChange={handleInputChange}
+                className='inputGeneral-input'
+                placeholder='Karier Başlığı'
+                name='title'
+                value={inputData.title}
+                type="text"
+              />
+              <textarea
+                onChange={handleInputChange}
+                className='inputGeneral-input'
+                placeholder='Metin'
+                name='text'
+                value={inputData.text}
+                type="text"
+              ></textarea>
+              <textarea
+                onChange={handleInputChange}
+                className='inputGeneral-input'
+                placeholder='Karier URL'
+                name='url'
+                value={inputData.url}
+                type="text"
+              ></textarea>
+              <input
+                onChange={handleInputChange}
+                className='inputGeneral-input'
+                placeholder='Karier Buton Metni'
+                name='buttonText'
+                value={inputData.buttonText}
+                type="text"
+              />
+              <input
+                onChange={handleInputChange}
+                className='inputGeneral-input'
+                name='img'
+                value={inputData.img}
+                type="file"
+                disabled
+                required
+              />
+            </div>
+            <AdminButton type="submit" text={"Karier Oluştur"} />
+            <div onClick={() => handleOpenClose()} className='adminPopup-container-close'>
+              X
+            </div>
+          </form>
+        </div>
+      ) : null}
 
-                />
-
-           
-
-              </div>
-
-              <AdminButton type="submit" text={"Karier Oluştur"} />
-              <div onClick={() => handleOpenClose()} className='adminPopup-container-close'>
-                X
-              </div>
-            </form>
-
-
-          </div>
-
-        ) : ""
-      }
-
-      <AdminButton text={"karier Olustur"} onClicks={() => handleOpenClose()} />
-
+      <AdminButton text={"Karier Oluştur"} onClicks={() => handleOpenClose()} />
     </div>
   )
 }
 
-export default Career
+export default Career;

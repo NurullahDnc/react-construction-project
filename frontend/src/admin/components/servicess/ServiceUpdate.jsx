@@ -25,7 +25,7 @@ const ServiceUpdate = () => {
     const {user} = useSelector((state)=> state.auth)
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     useEffect(() => {
@@ -50,8 +50,9 @@ const ServiceUpdate = () => {
             await axios.put(`http://localhost:3001/servicesProduct/${id}`, valueData);
             toast.success("Güncelleme başarılı");
             navigate("/admin/services");
-            navigate(0)
-
+            setTimeout(() => {
+              navigate(0);
+            }, 750);
         } catch (error) {
             toast.error("Güncelleme sırasında hata oluştu", error);
          }

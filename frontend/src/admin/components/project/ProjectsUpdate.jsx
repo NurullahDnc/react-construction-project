@@ -26,7 +26,7 @@ const ProjectsCreate = () => {
     const {user} = useSelector((state)=> state.auth)
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     useEffect(() => {
@@ -57,8 +57,9 @@ const ProjectsCreate = () => {
             await axios.put(`http://localhost:3001/project/${id}`, valueData);
             toast.success("Güncelleme başarılı");
             navigate("/admin/projects");
-            navigate(0)
-
+            setTimeout(() => {
+                navigate(0);
+              }, 750);
         } catch (error) {
             toast.error("Güncelleme sırasında hata oluştu", error);
          }
@@ -76,7 +77,7 @@ const ProjectsCreate = () => {
         <div className='adminPopup'>
             <form onSubmit={handleClick} className='adminPopup-container'>
                 <div className='inputGeneral'>
-                    <h4>Proje Güncelle</h4>
+                    <h4 className='pageTitle'>Proje Güncelle</h4>
                     <input
                         onChange={handleInputChange}
                         className='inputGeneral-input'

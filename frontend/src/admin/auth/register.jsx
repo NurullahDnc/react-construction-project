@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../../config/FirebaseConfig'
 import {login as loginHandle } from '../../redux/AuthSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Register = () => {
 
@@ -14,7 +14,13 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
-    
+
+    const {user} = useSelector((state)=> state.auth)
+
+    if (!user) {
+      navigate("/")
+   }
+   
     const auth = getAuth();
 
     const handleRegister= async ()=>{
@@ -55,8 +61,8 @@ const Register = () => {
     return (
         <PageContainers>
             <div className='register'>
+                <h3 className='pageTitle' >Kulanıcı olsuturma</h3>
                 <div className='register-inputGeneral'>
-                    <h3 >Kulanıcı olsuturma</h3>
                     <input
                         className='inputGeneral-input'
                         placeholder='Kulanıcı adı'

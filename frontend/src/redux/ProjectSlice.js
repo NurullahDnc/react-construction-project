@@ -1,66 +1,61 @@
-// ProjectSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { collection, getDocs } from 'firebase/firestore'; 
+import { db } from '../config/FirebaseConfig'; 
 
-const initialState = {
-    project: [],
-    category: [],
-    loading: false,
-    error: null,
-};
-
-const res = await axios.get(`http://localhost:8000/iletisim`);
-
-//project getiriyor
+// Firebase üzerinden proje verilerini getiren asenkron eylem
 export const getProject = createAsyncThunk('getProject', async () => {
-    // const res = await axios.get(`http://localhost:3001/project`);
-    const res = await axios.get(`http://localhost:8000/iletisim`);
-
-    return res.data;
+    try {
+        const querySnapshot = await getDocs(collection(db, 'project'));
+        return querySnapshot.docs.map(doc => doc.data()); 
+    } catch (error) {
+        throw error; 
+    }
 });
 
-//category getiriyor
-export const getCategory = createAsyncThunk('getCategory', async ()=>{
-    const res = await axios.get('http://localhost:3001/category');
-    return res.data
-} )
-
+// Firebase üzerinden kategori verilerini getiren asenkron eylem
+export const getCategory = createAsyncThunk('getCategory', async () => {
+    try {
+        const querySnapshot = await getDocs(collection(db, 'category'));
+        return querySnapshot.docs.map(doc => doc.data()); 
+    } catch (error) {
+        throw error; 
+    }
+});
 
 const ProjectSlice = createSlice({
     name: 'Project',
-    initialState,
+    initialState: {
+        project: [],
+        category: [],
+        loadingProject: false,
+        loadingCategory: false,
+        errorProject: null,
+        errorCategory: null,
+    },
     reducers: {},
     extraReducers: (builder) => {
 
-        builder.addCase(getProject.fulfilled, (state, action) => {
-            state.project = action.payload.cars;
-            state.loading = false;
-        });
-
-        //pending durumunda true yap, üste yüklendikten sonra false yapıcaz
-        builder.addCase(getProject.pending, (state, action) => {
-            state.loading = true;
-        });
-
-        builder.addCase(getProject.rejected, (state, action) => {
-
-            if (action.payload) {
-                state.error = action.payload
-            } else {
-                state.error = action.error.stack
-            }
-        });
-
-        //category
-
-        builder.addCase(getCategory.fulfilled, (state, action)=>{
-            state.category = action.payload;
-
-        })
-
-
-        
-
+        builder
+            .addCase(getProject.fulfilled, (state, action) => {
+                state.project = action.payload;
+                state.loadingProject = false;
+            })
+            .addCase(getProject.pending, (state, action) => {
+                state.loadingProject = true;
+            })
+            .addCase(getProject.rejected, (state, action) => {
+                state.errorProject = action.payload ? action.payload : action.error.stack;
+            })
+            .addCase(getCategory.fulfilled, (state, action) => {
+                state.category = action.payload;
+                state.loadingCategory = false;
+            })
+            .addCase(getCategory.pending, (state, action) => {
+                state.loadingCategory = true;
+            })
+            .addCase(getCategory.rejected, (state, action) => {
+                state.errorCategory = action.payload ? action.payload : action.error.stack;
+            });
     },
 });
 

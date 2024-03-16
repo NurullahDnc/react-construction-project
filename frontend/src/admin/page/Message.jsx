@@ -79,7 +79,6 @@ export default function Message() {
 
   //delete
   const handleDelete = async (params) => {
-    console.log(params.id);
     const id = params.id
     axios.delete(`http://localhost:3001/message/${id}`)
       .then(() => {
@@ -95,6 +94,8 @@ export default function Message() {
   
   return (
     <div  >
+      <h4 className='pageTitle' >Mesajlar</h4>
+
       <DataGrid
         rows={rows}
         columns={columns}

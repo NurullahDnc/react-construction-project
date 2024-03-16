@@ -22,12 +22,11 @@ export default function Projects() {
   const dispacth = useDispatch();
 
   // const {user} = useSelector((state)=> state.auth)
-  // console.log(user,"xx");
 
   const {user} = useSelector((state)=> state.auth)
 
   if (!user) {
-    navigate("/")
+    navigate("/admin/")
  }
  
 
@@ -86,7 +85,7 @@ export default function Projects() {
   //reduxtan gelen veri uzerinde map don ekrana bastır
   const rows = project.map((item) => (
     {
-      id: item.id,
+      id: uuidv4(), 
       title: item.title,
       text: item.text,
       img: item.img,
@@ -97,13 +96,13 @@ export default function Projects() {
 
   //delete
   const handleDelete = async (params) => {
-    console.log(params.id);
     const id = params.id
     axios.delete(`http://localhost:3001/project/${id}`)
       .then(() => {
         toast.success("silme islemi basarılı")
-        navigate(0);
-      })
+        setTimeout(() => {
+          navigate(0);
+        }, 750);      })
       .catch((err) => {
         toast.error("silme isleminde hata olustu", err)
       })
@@ -132,14 +131,17 @@ export default function Projects() {
       .then(() => {
         toast.success("başsarılı sekilde eklendi")
         setIsOpen(!isOpen)
-        navigate(0)
 
+        //guncel veri getirmesi icin 7.5ms sayfayı yenilei başa at
+        setTimeout(() => {
+          navigate(0);
+        }, 750);
+        
         setInputData({ title: "", text: "", img: "" })
 
       })
       .catch((err) => {
         toast.error("Bir hata olsutu", err.status)
-        console.log(err);
       })
 
 
@@ -147,7 +149,9 @@ export default function Projects() {
 
 
   return (
-    <div  >
+    <div style={{ height: 580, width: '100%' }}>
+      <h4 className='pageTitle'>Projeler</h4>
+
       <DataGrid
         rows={rows}
         columns={columns}

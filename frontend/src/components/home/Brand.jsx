@@ -12,11 +12,6 @@ export default function Brand() {
     { img: "marka.webp" },
     { img: "Hardware_Store_Logos-05.webp" },
     { img: "marka.webp" },
-    { img: "Hardware_Store_Logos-05.webp" },
-    { img: "marka.webp" },
-    { img: "Hardware_Store_Logos-05.webp" },
-    { img: "marka.webp" },
-    { img: "Hardware_Store_Logos-05.webp" },
 
   ]
 
@@ -25,7 +20,7 @@ export default function Brand() {
   return (
     <div className='brand'>
 
-      <Heading text={"Müşterilerimiz"} title={"Bizim için her müşteri uzun vadeli bir ortaklıktır"} />
+      <Heading text={"Müşterilerimiz"} title={"Birlikte İnşa Ediyoruz"} />
 
       <div className='brand-items'>
 

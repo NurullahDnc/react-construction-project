@@ -5,7 +5,13 @@
 
     &-container{
         width: 90%;
+
         margin: auto;
+
+        @include mobil{
+            width: 84%;
+
+        }
         
 
         &-title{

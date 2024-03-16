@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Cars
+from .models import project
 
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Cars
+        model = project
         fields = '__all__'

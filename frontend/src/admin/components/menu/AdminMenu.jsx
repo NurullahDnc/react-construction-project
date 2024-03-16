@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { MdDashboard } from "react-icons/md";
 import { FaCity } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { logout as logoutHandle } from '../../../redux/AuthSlice'
 import { getAuth, signOut } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { FaUser } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const AdminMenu = () => {
@@ -60,61 +61,70 @@ const AdminMenu = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const {user, logout} = useSelector((state)=> state.auth)
-    // console.log(users, "as");
+    const [openMenu, setOpenMenu] = useState(false)
+    const { user, logout } = useSelector((state) => state.auth)
 
-  
+
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
-    
+
     const auth = getAuth();
 
-    const handleLogout= async()=>{
+    const handleLogout = async () => {
         dispatch(logoutHandle())
         await signOut(auth).then(() => {
             toast.success("Çıkış işlemi başarıyla gerçekleşti");
             navigate("/")
 
         }).catch((error) => {
-            toast.error("Çıkış yapma sırasında bir hata oluştu, tekrar deneyiniz");
+            toast.error("Çıkış yapma sırasında bir hata oluştu, tekrar deneyiniz", error);
         });
-          
+
     }
+
+    const toggleMenu=()=>{
+        setOpenMenu(!openMenu);
+    }
+
+
     return (
-        <nav className='AdminMenu'>
+        <nav className={`AdminMenu ${openMenu? AdminMenu: ""} `} >
+            <div className="AdminMenu-title">
+                <Link to="/" className="AdminMenu-title d-flex align-items-center   text-white text-decoration-none">
+                    <span className=" fs-4 ">Admin Panel</span>
 
-            <ol className='AdminMenu-container'>
-                <h2>
-                    {/* Admin Panel */}
+                </Link>
+                <div onClick={toggleMenu} className='AdminMenu-title-hamburgerMenu'><GiHamburgerMenu size={27} /> </div>
+            </div>
 
-                    {
-                        user ? <div>
-                            {
-                                user?.email
-                            }
-                        </div> : <p>Giris yapınız</p>
+            <hr className='AdminMenu-hr' />
+            <ul className="AdminMenu-item nav nav-pills flex-column mb-auto">
+                {navLinks.map((link) => (
+                    <li className=" nav-item" key={link.id}>
+                        <Link to={`/admin/${link.url}`} className="AdminMenu-items " aria-current="page">
+                            {link.icon && <link.icon className="pr-2" />}
+                            {link.text}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            <hr className='AdminMenu-hr' />
 
-                    }
+            <div className="AdminMenu-user  ">
+                <div className='AdminMenu-user-info'>
+                    <strong>{user.email}</strong> {/* Kullanıcı adını burada göster */}
 
-                    <button onClick={handleLogout} style={{ margin: "0 5px", padding: "5px", border: "2px solid black" }}>Cıkış yap</button>
+                    <button className='AdminMenu-user-info-btn' onClick={handleLogout} >Cıkış yap</button>
 
-                </h2>
-                {
-                    navLinks.map((item, i) => (
+                </div>
 
-                        <li key={i} className='AdminMenu-container-item'>
-
-                            {item.icon && <item.icon />}
-                            <Link to={item.url}  >{item.text} </Link>
-                        </li>
-                    ))
-                }
-
-
-            </ol>
+            </div>
         </nav>
+
     )
 }
 
 export default AdminMenu
+
+

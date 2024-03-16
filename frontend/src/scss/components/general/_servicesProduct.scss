@@ -34,7 +34,6 @@
 
     &-text {
         width: 50%;
-        text-indent: 20px;
         padding: 30px;
         color: $text-gray;
 
@@ -44,6 +43,7 @@
 
         &-p{
             color: $text-gray;
+            text-indent: 20px;
         }
         
         &-icon{

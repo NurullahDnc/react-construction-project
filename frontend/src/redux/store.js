@@ -4,6 +4,9 @@ import MessageSlice from './MessageSlice';
 import AuthSlice from './AuthSlice'
 import ServiceSlice from './ServiceSlice'
 import CareerSlice from './CareerSlice'
+import AboutSlice from './AboutSlice'
+import DarkModeSlice from './DarkModeSlice'
+
 
 
 const store = configureStore({
@@ -15,6 +18,8 @@ const store = configureStore({
     auth: AuthSlice, 
     service: ServiceSlice,
     career: CareerSlice,
+    about: AboutSlice,
+    darkMode: DarkModeSlice
     
   },
 });

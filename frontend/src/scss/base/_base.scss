@@ -29,6 +29,8 @@ html {
     font-size: 16px;
     scrollbar-width: thin;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -51,8 +53,8 @@ body.dark-mode .MuiTableBody-root .MTableBodyRow-root {
     color: $text-white; /* Metin rengi */
 }
 
-
-body.dark-mode input{
+body.dark-mode textarea,
+body.dark-mode input, textarea{
     color: black;
 }
 
@@ -96,8 +98,10 @@ a {
     cursor: pointer;
 
     &:hover {
-        color: $text-gray;
+        color: $main-orange;
         transition: 0.7s;
+        text-decoration: none;
+        
     }
 }
 

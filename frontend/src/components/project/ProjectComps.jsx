@@ -16,7 +16,6 @@ export default function ProjectComps() {
   const { project, loading, error } = useSelector((state) => state.project) 
   const {category} = useSelector((state)=> state.category)
 
-  console.log(project, "prosjec");
 
   useEffect(() => {
     dispacth(getProject())
@@ -32,22 +31,20 @@ export default function ProjectComps() {
     });
   }, []);
 
-  console.log(error);
   //tıklanan kategori alıyor,  usestate at
   const handleSubmit = (item) => {
     setSelectedProject(item.name)
-    console.log("Seçili Proje:", selectedProject);
 
   }
 
   // projeleri kategoriye gore filter yap degiskene at, selectedProject Tümü esit ise productdata don degil ise filter yap
-  const filterProduct = selectedProject === "Tümü" ? project : project.filter(item => item.category === selectedProject)
+  const filterProduct = selectedProject === "Tümü" ? project : project.filter(item => item.category === selectedProject) 
 
   return (
     <div className='ProjectComps headline'>
       <PageTitle title="Projelerimiz" />
 
-      <Heading   title="Dayanıklı Projeler Üretiyoruz" />
+      <Heading   title="Modern Tasarımlar, Güvenilir Projeler" />
       <div className='ProjectComps-category' >
         {
           category.map((item, i) => (

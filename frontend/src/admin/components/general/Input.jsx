@@ -6,7 +6,6 @@ const Input = ({name, text, type, value, placeholder, onChange}) => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    console.log("afdw");
   };
 
   return (

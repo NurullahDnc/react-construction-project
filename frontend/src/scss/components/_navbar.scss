@@ -6,23 +6,26 @@
 }
 
 .navbars {
+    width: 75%;
     color: $text-white;
     margin-top: 8px;
-    background-color: rgba(255, 85, 0, 0.8);
+    background-color: rgba($main-orange, 0.7);
     border-radius: 20px;
     z-index: 1000;
     position: absolute;
-    
+    outline: none;
+     border: none;
     @include mobil{
         position: fixed;
+        width: 90%;
     }
 
     &-menu{
         color: $main-orange;
- 
+
         &-btn{
             color: $text-black;
-
+       
         }
 
         

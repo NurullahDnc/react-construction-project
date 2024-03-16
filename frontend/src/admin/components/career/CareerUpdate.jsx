@@ -24,14 +24,13 @@ const CareerUpdate = () => {
     const {user} = useSelector((state)=> state.auth)
 
     if (!user) {
-        navigate("/")
+        navigate("/admin/")
     }
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(`http://localhost:3001/careerProduct/${id}`)
-                console.log(res);
                    const{title, text, url, buttonText} = res.data
                   setValueData({title, text, url, buttonText})
 
@@ -50,8 +49,11 @@ const CareerUpdate = () => {
             await axios.put(`http://localhost:3001/careerProduct/${id}`, valueData);
             toast.success("Güncelleme başarılı");
             navigate("/admin/career");
-            navigate(0)
 
+            setTimeout(() => {
+                navigate(0);
+              }, 750);
+              
         } catch (error) {
             toast.error("Güncelleme sırasında hata oluştu", error);
          }
