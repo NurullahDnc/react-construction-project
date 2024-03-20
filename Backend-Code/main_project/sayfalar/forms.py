@@ -12,7 +12,7 @@ class HomeAddCreate(forms.ModelForm):
         widgets = {
             "title": forms.TextInput(attrs={"class": "form-control"}),
             "text": forms.Textarea(),
-            "img": forms.TextInput(),
+            "slug": forms.TextInput(),
         }
         error_messages = {
             "title": {
@@ -28,7 +28,7 @@ class HomeAddCreate(forms.ModelForm):
 class HomeUpdate(forms.ModelForm):
     class Meta:
         model = project
-        fields = ("title", "text", "img", "slug","category")
+        fields = ("title", "text", "img","category","slug")
         labels = {
             "title": "Kurs Başlığı giriniz",
             "text": "Açıklama"
@@ -36,7 +36,8 @@ class HomeUpdate(forms.ModelForm):
         widgets = {
             "title": forms.TextInput(attrs={"class": "form-control"}),
             "text": forms.Textarea(),
-            "img": forms.TextInput(),
+            "slug": forms.TextInput(),
+
         }
         error_messages = {
             "title": {
@@ -48,3 +49,5 @@ class HomeUpdate(forms.ModelForm):
                 "max_length": "Lütfen 5 harften kısa bir cümle giriniz"
             }
         }
+class uploadForm(forms.Form):
+    img=forms.ImageField()

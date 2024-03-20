@@ -35,6 +35,9 @@
             <td>
                 <a href="{% url "projectUpdate" projectOne.id %}">✏️Düzenle</a>
             </td>
+            <td>
+                <a href="{% url "projectDelete" projectOne.id %}">🗑️Sil</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

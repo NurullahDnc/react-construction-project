@@ -1,7 +1,8 @@
 {% block title %} 
 <h3 style="margin-left: 150px;">Anasayfa</h3>
 {% for project_ in project %}
-    <a href="/project/{{project_.slug}}">{{project_.title}}</a>
+<img src="{{ project_.img.url }}" alt="">
+<a href="/project/{{project_.slug}}">{{project_.title}}</a>
     <br>
 {% endfor %}
 <form action="{% url 'search' %}">

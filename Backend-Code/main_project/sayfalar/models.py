@@ -11,10 +11,10 @@ class categories(models.Model):
 class project(models.Model):
     title=models.CharField(max_length=50)
     text=models.TextField()
-    img=models.CharField(max_length=50,blank=False)
+    img=models.ImageField(upload_to="images",default="")
     date=models.DateField(auto_now=True)
     isActive=models.BooleanField(default=True)
-    slug=models.SlugField(default="",null=False,unique=True,db_index=True,blank=True)
+    slug=models.SlugField(default="",null=False,unique=True,db_index=True)
     category=models.ForeignKey(categories,default=1, on_delete=models.CASCADE,related_name="evler")
 
     # def save(self,*args,**kwargs):
@@ -42,5 +42,8 @@ class careerProduct(models.Model):
     text=models.TextField()
     url=models.CharField(max_length=50,blank=False)
     buttonText=models.DateField()
+
+class uploadModel(models.Model):
+    image=models.ImageField(upload_to="img")
    
 

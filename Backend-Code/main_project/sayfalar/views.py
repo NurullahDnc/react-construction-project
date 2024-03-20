@@ -1,8 +1,10 @@
+import os
+import random
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
-from .forms import HomeAddCreate, HomeUpdate
-from .models import categories, project,categories
+from .forms import HomeAddCreate, HomeUpdate, uploadForm
+from .models import categories, project,categories, uploadModel
 from .serializers import ItemSerializer
 from rest_framework import generics
 from . import models
@@ -54,13 +56,10 @@ def details(request, slug):
 
 def homeadd(request):
         if request.method=="POST":
-            form=HomeAddCreate(request.POST)
+            form=HomeAddCreate(request.POST,request.FILES)
             if form.is_valid():
-                kurs=project(title=form.cleaned_data["title"],
-                            text=form.cleaned_data["text"],
-                            img=form.cleaned_data["img"],
-                            slug=form.cleaned_data["slug"])
-                kurs.save()
+                form.save()
+                
                 return redirect("/anasayfa")
         else:
             form=HomeAddCreate()#Eğer veriler gelmyorsa yeni bir form uygulaması göndermek için kullanılır
@@ -75,11 +74,34 @@ def homeList(request):
 def projectUpdate(request, id):
     projectValue = get_object_or_404(project, pk=id)
     if request.method == "POST":
-        form = HomeUpdate(request.POST, instance=projectValue)
+        form = HomeUpdate(request.POST,request.FILES, instance=projectValue)
         if form.is_valid():
             form.save()
-            return redirect("/course_list")  # Doğru URL'yi belirtin
+            return redirect("/liste") 
     else:
         form = HomeUpdate(instance=projectValue)
 
     return render(request, "pages/projectUpdate.html", {"form": form })
+
+
+def projectDelete(request,id):
+    projectAll=get_object_or_404(project,pk=id)
+    if request.method=="POST":
+        projectAll.delete()
+        return redirect("courseList")
+    return render(request,"pages/projectDelete.html",{"project":projectAll})
+
+from django.shortcuts import render
+from .forms import uploadForm
+from .models import uploadModel
+
+def upload(request):
+    if request.method == "POST":
+        form = uploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            model = uploadModel(image=request.FILES["img"])
+            model.save()
+            return render(request, "pages/succes.html")
+    else:  # Handle GET request
+        form = uploadForm()
+    return render(request, "pages/uploadPage.html", {"form": form})

@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Kurs EKleme Sayfası</h1>
-    <form action="{% url "home_ekle" %}" method="POST" novalidate>
+    <form action="{% url "home_ekle" %}" method="POST" novalidate enctype="multipart/form-data">
         {% comment %} Googlda bulunan validate kontrollerinden çıkmak için novalidate yazmamız gerekli {% endcomment %}
         {% csrf_token %}
         {% for field in form %}

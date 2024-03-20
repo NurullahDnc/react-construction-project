@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Bu Dosyayı silmek istediğinize emin misiniz?</h1>  
+{{project.title}}
+<form action="{% url "projectDelete" project.id %}" method="POST">
+    {% csrf_token %}
+    <a href="{% url "courseList" %}">Hayır</a>
+    <button type="submit">Sil</button>
+</form>
+</body>
+</html>

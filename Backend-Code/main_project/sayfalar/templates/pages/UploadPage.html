@@ -1,0 +1,7 @@
+{% block title %}
+    <form action="{% url "uploadimage" %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Yükle</button>
+    </form>
+{% endblock title %}
