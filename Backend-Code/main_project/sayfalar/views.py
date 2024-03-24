@@ -29,7 +29,7 @@ def search(request):
 
 def project_(request,slug):
     db = project.objects.all()
-    car_list = [{"id": db_.id, "title": db_.name, "slug": db_.slug} for db_ in db]
+    car_list = [{"id": db_.id, "title": db_.name, "slug": db_.slug,"img":db_.img} for db_ in db]
     return JsonResponse({"cars": car_list})
 
 def categories_(request,slug):
