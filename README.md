@@ -13,28 +13,27 @@
  ## About The Project
   
   
- 
- ![Ekran görüntüsü 2024-05-10 113201.png](https://github.com/NurullahDnc/e-commerces-next.js/assets/150585098/f72dcac5-8fe9-4c03-b043-523def66ca18)
- 
- <hr/>
-    
- ![Ekran görüntüsü 2024-03-17 205107](https://github.com/NurullahDnc/e-commerces-next.js/assets/150585098/2810a5d6-ab1d-431b-b5bc-edb4da2b82a0)
+ ![Ekran görüntüsü 2024-05-10 113201](https://github.com/NurullahDnc/react-construction-project/assets/150585098/450a3153-dfb5-4359-8923-12e2f7a2dcdc)
+
  
  <hr/>
+    ![Ekran görüntüsü 2024-05-10 113256](https://github.com/NurullahDnc/react-construction-project/assets/150585098/39946865-f581-42d3-9e2d-d3d156c69e6a)
+
  
+ <hr/>
+ 
+  ![Ekran görüntüsü 2024-05-10 114518](https://github.com/NurullahDnc/react-construction-project/assets/150585098/2462f342-0e27-467c-a123-575820d40c0e)
+
+ 
+ <hr/>
+ 
+       ![Ekran görüntüsü 2024-05-10 114901](https://github.com/NurullahDnc/react-construction-project/assets/150585098/3ad6dbb9-e379-433c-b442-6a832e567d8e)
+
+ 
+ <hr/>
+ 
+ ![Ekran görüntüsü 2024-05-10 113201](https://github.com/NurullahDnc/react-construction-project/assets/150585098/713c064e-28f7-482e-adc4-3fb81353602f)
   
- ![Ekran görüntüsü 2024-03-17 205215](https://github.com/NurullahDnc/e-commerces-next.js/assets/150585098/45adb549-ca55-428c-b10e-98f3b0fa84eb)
- 
- <hr/>
- 
-   
- ![Ekran görüntüsü 2024-03-17 205247](https://github.com/NurullahDnc/e-commerces-next.js/assets/150585098/526e3338-aa4b-4ad2-8b9a-a6d808d6f0ce)
- 
- <hr/>
- 
-   
- ![Ekran görüntüsü 2024-03-17 205407](https://github.com/NurullahDnc/e-commerces-next.js/assets/150585098/0cd4b4a6-ea0c-41eb-95bb-db6acf91a61a)
- 
  
  
    ## Build
