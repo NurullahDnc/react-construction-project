@@ -13,27 +13,14 @@
  ## About The Project
   
   
- ![Ekran görüntüsü 2024-05-10 113201](https://github.com/NurullahDnc/react-construction-project/assets/150585098/450a3153-dfb5-4359-8923-12e2f7a2dcdc)
+![Ekran görüntüsü 2024-05-10 113201](./assets/150585098/450a3153-dfb5-4359-8923-12e2f7a2dcdc)
+<hr/>
+![Ekran görüntüsü 2024-05-10 113256](./assets/150585098/b2dce682-bdb0-4049-bab4-858cb6ee0bc1)
+<hr/>
+![Ekran görüntüsü 2024-05-10 114518](./assets/150585098/984ce243-36ae-4bd6-8987-6ad5a3c51db4)
+![Ekran görüntüsü 2024-05-10 114901](./assets/150585098/f4ecf952-2374-4ea3-b1c1-0fb7bb7cbd4b)
+![Ekran görüntüsü 2024-05-10 113326](./assets/150585098/e6b40f78-3108-4920-9046-a0b6ca287738)
 
- 
- <hr/>
-    ![Ekran görüntüsü 2024-05-10 113256](https://github.com/NurullahDnc/react-construction-project/assets/150585098/39946865-f581-42d3-9e2d-d3d156c69e6a)
-
- 
- <hr/>
- 
-  ![Ekran görüntüsü 2024-05-10 114518](https://github.com/NurullahDnc/react-construction-project/assets/150585098/2462f342-0e27-467c-a123-575820d40c0e)
-
- 
- <hr/>
- 
-       ![Ekran görüntüsü 2024-05-10 114901](https://github.com/NurullahDnc/react-construction-project/assets/150585098/3ad6dbb9-e379-433c-b442-6a832e567d8e)
-
- 
- <hr/>
- 
- ![Ekran görüntüsü 2024-05-10 113201](https://github.com/NurullahDnc/react-construction-project/assets/150585098/713c064e-28f7-482e-adc4-3fb81353602f)
-  
  
  
    ## Build
